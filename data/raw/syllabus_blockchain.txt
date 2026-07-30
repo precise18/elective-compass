@@ -1,0 +1,5 @@
+Blockchain Development: Students move from foundational concepts to production-grade decentralised applications (dApps), with a strong emphasis on smart contracts, NFTs (Non-Fungible Tokens), DeFi (Decentralised Finance) and real-world deployment workflows. The curriculum mirrors contemporary Web3 stacks: from deploying ERC20 tokens through NFTs and upgradable contracts to integrated systems combining DEXs (Decentralised Exchanges), smart wallets and cross-chain NFT use cases. By the end, students will have deployed contracts to a public testnet, maintained a GitLab repository, and presented at a demo day.
+
+Courses: Blockchain Basics, Introduction to Python and Vyper, Solidity Smart Contract Development, Full-Stack Web3 Development Crash Course.
+
+Tools & Technologies: Python, Java, Vyper, Solidity, Ethereum Toolset, BNB Toolset, Solana Toolset, GitLab, Web3.
