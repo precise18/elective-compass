@@ -1,0 +1,7 @@
+Mobile Development: Students build mobile applications using Flutter and Dart, covering app creation, framework basics, and the full development cycle from UI to cloud integration. The module emphasises practical understanding over mastery, equipping students with skills to build functional mobile apps efficiently across four weeks plus a final project.
+
+Courses: Flutter and Dart, Firebase Authentication with Flutter.
+
+Tools & Technologies: Flutter, Dart, Firebase Authentication, UI/UX design, cloud integration.
+
+Resources: Dart Language Tour, Flutter YouTube channel (Widget of the Week, Firebase with Flutter).

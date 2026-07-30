@@ -1,0 +1,5 @@
+Cybersecurity: Students learn to design, test, and deliver secure, resilient web applications with a proactive security mindset. The elective covers secure coding practices, vulnerability identification, and penetration testing using industry-standard tools and frameworks, all through the lens of software development.
+
+Courses: Introduction to Cybersecurity (Cisco Networking Academy), Introduction to Cybersecurity OR Pre-Security path (TryHackMe).
+
+Tools & Technologies: Cisco Networking Academy, TryHackMe, penetration testing tools, security frameworks.

@@ -1,0 +1,5 @@
+Cloud Computing: Students learn to develop and deploy cloud applications using AWS (Amazon Web Services). They gain proficiency in cloud services and platforms, cloud security, compliance, and cost management strategies. By the end, they can create secure and scalable cloud-based solutions.
+
+Courses: Introduction to the AWS Management Console (AWS Educate), Introduction to Cloud 101 (AWS Educate).
+
+Tools & Technologies: AWS (Amazon Web Services), AWS Management Console, cloud security, compliance, cost management.

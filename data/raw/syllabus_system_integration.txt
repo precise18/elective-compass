@@ -1,0 +1,7 @@
+System Integration: Students build LightShed, a distributed loadshedding information system, with a strong emphasis on how multiple independent services communicate across networks. Core themes are fault tolerance, partial failure handling, data consistency, and proactive monitoring. Students gain practical skills in Message Queue infrastructure and distributed system design throughout the four iterations.
+
+Courses: JMS interfaces (Java Messaging), RESTful API design and JSON serialisation.
+
+Tools & Technologies: JMS (Java Messaging), RESTful APIs, JSON, message queues, distributed systems, fault tolerance, monitoring, microservices.
+
+Projects: HealthSafe, LogisticsConnect, TrafficFlow.

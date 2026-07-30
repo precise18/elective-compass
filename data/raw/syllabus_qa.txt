@@ -1,0 +1,7 @@
+Quality Assurance: Students examine the fundamental differences between manual and automated testing and apply both. The elective covers the Test Automation Pyramid, emphasising test coverage, reduced time and cost, improved software quality, and the ability to test non-functional features like performance and scalability. Discipline, organisation, and structured execution are core themes throughout.
+
+Courses: Quality Assurance - Techniques and Methodologies (Alison), Fundamentals of Quality Assurance (Alison).
+
+Tools & Technologies: Manual testing, automated testing, Test Automation Pyramid, performance testing, scalability testing.
+
+Resources: Test Automation University.

@@ -1,0 +1,5 @@
+Data Engineering: A comprehensive 9-week programme building from ETL (Extract, Transform, Load) pipelines, Unix/Linux, Python, and data storage through to database management, data architecture, ingestion methods, and data processing. Key tools include Apache Spark, Kafka, and Airflow. Students engage with cloud platforms including AWS, GCP (Google Cloud Platform), and Azure, and work with relational and non-relational databases, data warehousing, and both batch and stream processing.
+
+Courses: Data Engineering Basics for Everyone (IBM on edX), Relational Database Management Systems (IBM).
+
+Tools & Technologies: ETL pipelines, Unix/Linux, Python, Apache Spark, Kafka, Airflow, AWS, GCP, Azure, relational databases, non-relational databases, data warehousing, batch processing, stream processing.
