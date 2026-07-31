@@ -1,0 +1,29 @@
+JJob Title: Cloud Engineer (Entry Level)
+Company: Amazon Web Services (AWS)
+
+Job Description:
+We are seeking a Cloud Engineer to join our infrastructure team. You will be responsible for designing, deploying, and maintaining cloud solutions on AWS. This role requires a solid understanding of cloud computing principles and a passion for automation.
+
+Key Responsibilities:
+- Deploy and manage AWS services including EC2, S3, RDS, Lambda, and VPC
+- Implement infrastructure as code using CloudFormation and Terraform
+- Monitor system performance using CloudWatch and set up alerts
+- Ensure security compliance by managing IAM policies and security groups
+- Automate routine tasks using Python and Bash scripts
+- Collaborate with development teams to optimize cloud costs
+- Troubleshoot and resolve infrastructure issues
+
+Requirements:
+- Bachelor's degree in Computer Science, Engineering, or related field
+- Understanding of cloud computing concepts (IaaS, PaaS, SaaS)
+- Basic Linux/Unix administration skills
+- Knowledge of networking fundamentals (TCP/IP, DNS, HTTP)
+- Experience with version control (Git)
+- Strong problem-solving and analytical skills
+- Excellent communication skills
+
+Nice to Have:
+- AWS Certified Cloud Practitioner or Solutions Architect Associate
+- Experience with Docker and Kubernetes
+- Knowledge of CI/CD pipelines (Jenkins, GitLab CI)
+- Familiarity with Python or Java programming
