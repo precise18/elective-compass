@@ -1,0 +1,153 @@
+We're Hiring: Cloud & DevOps Manager
+
+    ️ Build the cloud platforms that keep Africa's most loved Merchant Operating Platform running.
+
+Location: South Africa
+Business Unit: Technology
+Reports to: Head of Infrastructure, Cloud & DevOps
+
+Why This Role Matters
+
+Every merchant transaction. Every production deployment. Every customer interaction. Every digital service.
+
+They all rely on cloud platforms that are secure, resilient and always available.
+
+As Lesaka continues to modernise its Merchant Operating Platform, cloud engineering and DevOps have become fundamental to how we deliver technology. We are building an engineering environment where automation replaces manual effort, developers can deploy with confidence, and infrastructure scales with the business.
+
+This role is responsible for leading the Cloud & DevOps team that delivers those capabilities. You will ensure our cloud platforms remain reliable, our infrastructure is automated, our deployment pipelines are secure, and our engineering teams have the tools they need to deliver value faster.
+
+About Lesaka
+
+Lesaka is a fintech company on a mission to digitise commerce in Africa. We are listed on NASDAQ (LSAK) and the JSE (LSK) and serve merchants, consumers and enterprises across the continent. From spaza shops and taxi ranks to restaurants and city traders, our products power the small exchanges and the big steps of African commerce.
+
+One platform. Many products. One ambition: to become Africa's most loved Merchant Operating Platform.
+
+How We Operate
+
+Our strategy starts from a simple operating truth.
+
+Exceptional customer experiences come from exceptional staff experiences.
+
+Everything we do balances four priorities:
+
+Customer Experience
+Staff Happiness
+Cost Discipline
+️ Risk Control
+
+Each pillar strengthens the others when executed well. Our technology organisation is built around one merchant journey with clear ownership, measurable outcomes and continuous improvement.
+
+    Our North Star
+
+Deliver exceptional experiences to our customers and our staff.
+
+We measure ourselves against:
+
+    CHAP (Customer Happiness)
+    SHAP (Staff Happiness)
+    Cost-to-Serve Efficiency
+    Regulatory Impact
+
+Happy customers. Happy staff. Disciplined cost. Controlled risk.
+
+The Role
+
+You will lead the Cloud & DevOps team responsible for designing, building and operating Lesaka's cloud platforms and engineering capabilities.
+
+You will oversee cloud operations, infrastructure engineering, DevOps pipelines and platform reliability while ensuring our environments remain secure, resilient and cost effective.
+
+Leading a team of Cloud and DevOps Engineers, you will partner closely with Architecture, Security, Applications, ERP, CRM and Infrastructure teams to build platforms that enable reliable software delivery, support business growth and improve operational efficiency.
+
+The role sits within the Operate and Optimise phases of the CIO value chain and plays a critical role in enabling secure, scalable and highly available technology services across the Merchant Division.
+
+What You'll Own
+
+    ️ Cloud Platform Operations & Reliability
+
+    Operate and continuously improve enterprise cloud platforms across production, development and test environments.
+    Ensure cloud services deliver high availability, resilience and operational stability.
+    Lead incident response, problem management and root cause analysis to minimise service disruption.
+    Maintain monitoring, logging and observability platforms that provide proactive operational insight.
+    Lead disaster recovery and business continuity testing to ensure recovery objectives are consistently achieved.
+
+    ️ Cloud Engineering & Infrastructure Optimisation
+
+    Drive Infrastructure-as-Code adoption across all cloud environments using automation-first principles.
+    Improve cloud performance, scalability and operational efficiency through continuous optimisation.
+    Support migration of enterprise workloads into cloud-hosted environments.
+    Implement cloud governance standards, resource tagging and cost optimisation practices.
+    Reduce manual provisioning through infrastructure automation and standardisation.
+
+DevOps Engineering & Delivery
+
+    Lead the implementation and continuous improvement of enterprise CI/CD pipelines.
+    Drive DevOps adoption across development teams through automation and engineering best practice.
+    Implement automated testing, deployment, rollback and release management capabilities.
+    Embed DevSecOps practices and security controls throughout the software delivery lifecycle.
+    Improve deployment reliability while reducing release risk and increasing engineering productivity.
+
+Connectivity, Security & Platform Integration
+
+    Manage cloud networking, hybrid connectivity and secure integration between cloud and on-premise environments.
+    Partner with Security teams to ensure cloud platforms comply with PCI DSS, SOX ITGC, POPIA and internal security standards.
+    Support zero-trust networking, identity management and secure access controls.
+    Work with Architecture and Applications teams to ensure cloud platforms support current and future business requirements.
+    Monitor cloud platform performance and provide operational reporting to Infrastructure leadership.
+
+People Leadership & Continuous Improvement
+
+    Lead, coach and develop a high-performing Cloud & DevOps engineering team.
+    Build technical capability across cloud engineering, automation and DevOps disciplines.
+    Foster a culture of accountability, collaboration and continuous improvement.
+    Reduce reliance on external service providers by strengthening internal engineering capability.
+    Drive innovation and automation initiatives that improve operational performance and engineering maturity.
+
+What You'll Bring
+
+You enjoy solving operational complexity through engineering and automation.
+
+You understand that modern infrastructure is built through code, automation and continuous improvement—not manual intervention.
+
+You are equally comfortable leading technical teams, resolving complex operational issues and partnering with stakeholders to deliver reliable technology services.
+
+You'll bring:
+
+    Strong experience operating enterprise cloud platforms using AWS, Azure or Google Cloud Platform.
+    Practical experience with Infrastructure-as-Code technologies such as Terraform.
+    Strong understanding of Kubernetes, container platforms and cloud networking.
+    Experience designing and supporting CI/CD pipelines and DevOps engineering practices.
+    Knowledge of monitoring, observability and Site Reliability Engineering principles.
+    Experience implementing cloud security, governance and operational controls.
+    Strong stakeholder management and people leadership capability.
+
+How You'll Show Up
+
+    You lead through technical credibility and collaboration.
+    You automate repetitive work and simplify operational complexity.
+    You remain calm during major incidents and focus on sustainable solutions.
+    You build reliable platforms that enable development teams to move faster.
+    You take ownership of outcomes and continuously improve how the team operates.
+    You develop people while building engineering capability.
+    You balance innovation with operational discipline and risk management.
+
+Experience & Qualifications
+Experience
+
+    5–8 years' experience in Cloud Engineering, Infrastructure, DevOps or Platform Operations.
+    At least 4–5 years leading cloud or infrastructure engineering teams.
+    Experience managing enterprise cloud-hosted environments.
+    Proven experience implementing CI/CD pipelines and DevOps automation.
+    Experience with Infrastructure-as-Code, Kubernetes and container platforms.
+    Experience with enterprise monitoring, observability and Site Reliability Engineering practices.
+    Experience supporting hybrid cloud environments, disaster recovery and vendor management.
+
+
+Qualifications & Certifications
+
+    Bachelor's Degree or Advanced Diploma in Information Technology, Computer Science, Information Systems, Engineering or a related discipline (advantageous).
+    Postgraduate qualification in Cloud Computing, Infrastructure Engineering, DevOps or Technology Management (advantageous).
+    AWS, Microsoft Azure or Google Cloud Professional certification.
+    Certified Kubernetes Administrator (CKA), Terraform Associate or equivalent (advantageous).
+    DevOps Foundation, DevOps Leader or ITIL Foundation certification (advantageous).
+    CISSP or equivalent cloud security certification (advantageous).
+
