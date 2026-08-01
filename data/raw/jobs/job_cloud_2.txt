@@ -1,0 +1,57 @@
+We are seeking a highly skilled and experienced Infrastructure / Cloud / DevOps Engineer to join our team. The successful candidate will be responsible for designing, implementing, automating, securing, and maintaining cloud and on-premises infrastructure while driving DevOps best practices to support business-critical applications.
+
+Minimum Requirements
+
+    Bachelor's Degree (NQF Level 7) in:
+    Computer Science
+    Information Technology
+    Engineering
+    Or a related field
+    One or more of the following certifications:
+    AWS Certified DevOps Engineer
+    Microsoft Azure DevOps Engineer Expert
+    Or another relevant Cloud, Infrastructure, or DevOps certification
+    Minimum 7 years' experience in Infrastructure, Cloud Computing, and DevOps environments.
+
+Key Responsibilities
+
+    Design, implement, and manage cloud infrastructure (AWS, Azure, or hybrid environments).
+    Build and maintain CI/CD pipelines to automate software deployment.
+    Manage infrastructure using Infrastructure as Code (IaC) tools.
+    Monitor system performance, availability, and security.
+    Implement cloud governance, backup, disaster recovery, and high-availability solutions.
+    Collaborate with development teams to streamline deployment processes.
+    Automate infrastructure provisioning and configuration management.
+    Manage containerisation technologies such as Docker and Kubernetes.
+    Ensure compliance with security standards and best practices.
+    Troubleshoot infrastructure, networking, and cloud-related issues.
+    Continuously improve system reliability, scalability, and operational efficiency.
+
+Required Technical Skills
+
+    AWS and/or Microsoft Azure Cloud Platforms
+    DevOps tools (Azure DevOps, Jenkins, GitLab CI/CD, GitHub Actions)
+    Infrastructure as Code (Terraform, ARM Templates, CloudFormation, Ansible)
+    Docker and Kubernetes
+    Linux and Windows Server Administration
+    Networking, DNS, VPNs, Load Balancing, Firewalls
+    Monitoring tools such as Prometheus, Grafana, CloudWatch, Azure Monitor
+    Scripting using PowerShell, Bash, or Python
+    Version control using Git
+
+Key Competencies
+
+    Strong analytical and problem-solving skills
+    Excellent communication and collaboration abilities
+    Ability to work independently and within cross-functional teams
+    Strong planning and organisational skills
+    Attention to detail
+    Ability to work under pressure and meet deadlines
+    Commitment to continuous learning and innovation
+
+Why Join Us?
+
+    Work on cutting-edge cloud and infrastructure technologies.
+    Opportunity to lead digital transformation initiatives.
+    Collaborative and innovative working environment.
+    Professional growth and development opportunities.
