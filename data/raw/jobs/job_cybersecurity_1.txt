@@ -1,0 +1,42 @@
+Full job description
+
+The Cyber Security Specialist focusses upon the provision of cyber security activities, aligning global cyber security risk reduction with local market business and technology priorities and to the global cyber security strategy to be implemented in the local market/s.
+
+The Cyber Security Specialist has a good understanding of established concepts and procedures in protecting XLink from security threats, reducing risk across XLink’s technology infrastructure and implementing security controls across XLink with a single design.
+
+Policy & Training:
+
+    Developing security policies and training employees on best practices to reduce risk.
+
+Threat Detection & Monitoring:
+
+    Continuously monitoring IT systems for threats, anomalies, and potential breaches.
+
+Vulnerability & Risk Assessment:
+
+    Conducting regular risk assessments and vulnerability scanning to identify weaknesses.
+
+Security Controls & Compliance:
+
+    Implementing and maintaining security controls (firewalls, encryption) and ensuring compliance with regulations like POPIA.
+
+Collaboration & Security Awareness Training:
+
+    Work closely with the projects management team to ensure secure development of software codes and products is adhered and maintained throughout the software development life cycle.
+    Developing and delivering security education to staff to minimize human-centric risks.
+
+Incident Response:
+
+    Handling security incidents, including investigating breaches and taking corrective actions.
+
+    Demonstrates a good understanding of procedures and advises the technical operation teams on the Cyber security platforms across their full lifecycle;
+    Contributes to the transformation of Cyber Security capability, ongoing maintenance and any security related projects to make sure controls are effective;
+    Detects, identifies and responds to cyber events, threats, security risks and vulnerabilities in line with cyber security policies and procedures;
+    Uses communication skills to promote Cyber Defence best practices across the market/s;
+    Effectively interacts with colleagues across Technology and in Corporate Security, audit and risk;
+    Performs other job-related duties or tasks defined by the supervisor or resulting from assigned agendas.
+    Security - Manages information and Cyber Security related activities (including budgeting, planning, implementation, testing, reporting) and recommending appropriate remediation measures to ensure the integrity and continuity of systems, services and information. Incorporates secure by design principles when designing, building, testing solutions, products and services.
+    Risk & Compliance - Understanding and mitigating potential risk factors to XLink in accordance with relevant guidance, standards and processes.
+    3 Year Degree/Diploma + 3-5 years’ experience
+    Proficiency in SIEM, firewall management, and cloud security as well as experience with frameworks like ISO 27001
+
