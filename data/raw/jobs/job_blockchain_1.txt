@@ -1,0 +1,24 @@
+Job Description
+
+We are looking for a blockchain developer who will be responsible for designing, implementing, and supporting a distributed blockchain-based network. Your primary responsibility will be analyzing requirements, designing blockchain technology around a certain business model, and the building and launching of a blockchain network.
+Responsibilities
+
+    Research, design, develop, and test blockchain technologies
+    Brainstorm and help evaluate applications for new tools and technologies as they continually evolve
+    Maintain and extend current client- and server-side applications responsible for integration and business logic
+    Be involved in the global blockchain community—work on implementing and integrating the latest improvement proposals
+    Document new solutions as well as maintaining that of existing ones
+
+Skills
+
+    Strong software development background
+    Experience working with large codebases
+    Experience working with open-source projects
+    Proficiency in one of the following languages: C++, Java, JavaScript {{ Depending on the project }}
+    Strong knowledge of common algorithms and data structures
+    Familiarity with basic cryptography
+    Familiarity with P2P networks
+    Strong knowledge of bitcoin-like blockchains
+    Strong knowledge of concurrency and writing efficient and safe multithreaded code
+    Strong knowledge of STL, C++11 {{ In the case of a blockchain based on C++ }}
+    Proficiency in the Qt Widgets module {{ Applies to projects where a GUI wallet application is needed }}
