@@ -1,0 +1,24 @@
+Job Title: Middleware Developer
+Company: Global Systems Connect
+
+Job Description:
+We are seeking a Middleware Developer to join our integration team. You will design, deploy, and maintain middleware solutions that connect legacy systems with modern cloud-based applications.
+
+Key Responsibilities:
+- Build and maintain integration components using enterprise service bus (ESB) tools.
+- Write Java-based connectors to interface with external systems.
+- Handle data mapping, transformation, and routing logic.
+- Implement error handling and logging for integration flows.
+- Collaborate with stakeholders to understand system requirements.
+- Ensure high availability and fault tolerance of integration systems.
+
+Requirements:
+- Experience with Java and XML/JSON processing.
+- Understanding of SOAP and REST web services.
+- Knowledge of version control systems (Git).
+- Excellent debugging and problem-solving skills.
+
+Nice-to-Have:
+- Experience with JMS and ActiveMQ.
+- Understanding of distributed transaction management.
+- Experience with containerization (Docker/Kubernetes).
