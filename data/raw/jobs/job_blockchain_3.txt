@@ -1,0 +1,24 @@
+Job Title: Smart Contract Developer (Junior)
+Company: ChainTech Labs
+
+Job Description:
+We are looking for a passionate Smart Contract Developer to join our Web3 team. You will design, implement, and audit smart contracts using Solidity and Vyper for DeFi and NFT applications.
+
+Key Responsibilities:
+- Write secure and gas-efficient smart contracts for Ethereum Virtual Machine (EVM).
+- Develop and test smart contracts using Hardhat and Foundry.
+- Build full-stack dApps integrating smart contracts with React and Web3.js.
+- Perform code audits to identify security vulnerabilities (re-entrancy, overflow).
+- Deploy contracts to testnets and mainnet.
+- Stay updated on the latest EIPs (Ethereum Improvement Proposals) and industry standards.
+
+Requirements:
+- Strong understanding of blockchain fundamentals and cryptography.
+- Proficiency in Solidity (or Vyper) and familiarity with development frameworks.
+- Understanding of the Ethereum ecosystem (ERC-20, ERC-721, ERC-1155).
+- Knowledge of OpenZeppelin contracts and best practices.
+
+Nice-to-Have:
+- Experience with DEXs (Uniswap, PancakeSwap) or DeFi protocols.
+- Understanding of IPFS or other decentralized storage.
+- Contributions to open-source blockchain projects.
