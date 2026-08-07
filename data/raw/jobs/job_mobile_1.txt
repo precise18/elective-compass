@@ -1,0 +1,24 @@
+Job Title: Flutter Mobile Developer (Entry Level)
+Company: AppForge Studios
+
+Job Description:
+We are looking for a creative Flutter Developer to build cross-platform mobile applications for iOS and Android. You will work on the full app lifecycle from UI design to deployment on the app stores.
+
+Key Responsibilities:
+- Build and maintain high-performance mobile applications using Flutter and Dart.
+- Implement Firebase Authentication and Cloud Firestore for user management and data storage.
+- Design clean, intuitive, and responsive user interfaces.
+- Consume RESTful APIs and handle offline data caching.
+- Debug and resolve performance issues and platform-specific bugs.
+- Participate in code reviews and write unit tests.
+
+Requirements:
+- Familiarity with Flutter and Dart (coursework or personal projects accepted).
+- Understanding of mobile UI/UX design principles.
+- Knowledge of Git and version control.
+- Ability to work in an agile team environment.
+
+Nice-to-Have:
+- Experience with Firebase (Auth, Firestore, Push Notifications).
+- Published an app on the Google Play Store or Apple App Store.
+- Understanding of state management (Provider, Riverpod, Bloc).
