@@ -1,0 +1,24 @@
+Job Title: Junior Systems Integration Engineer
+Company: IntegraTech Systems
+
+Job Description:
+We are looking for a Junior Integration Engineer to help connect diverse software applications across our enterprise. You will work with APIs, message queues, and middleware to enable seamless data flow.
+
+Key Responsibilities:
+- Design and develop RESTful APIs for system-to-system communication.
+- Implement messaging solutions using JMS (Java Message Service).
+- Work with JSON and XML for data serialization and transformation.
+- Build integration flows using middleware platforms (Apache Camel, MuleSoft).
+- Monitor integration performance and troubleshoot issues.
+- Document integration architectures and data flow diagrams.
+
+Requirements:
+- Understanding of software development principles.
+- Knowledge of Java or Python.
+- Familiarity with RESTful API design principles.
+- Understanding of messaging concepts (queues, topics, publish/subscribe).
+
+Nice-to-Have:
+- Experience with Spring Boot or similar frameworks.
+- Knowledge of microservices architecture.
+- Familiarity with Apache Kafka or RabbitMQ.
