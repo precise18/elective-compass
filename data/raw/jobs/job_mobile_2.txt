@@ -1,0 +1,24 @@
+Job Title: Mobile App Developer (Android/iOS)
+Company: TechStart Mobile
+
+Job Description:
+We are looking for a Junior Mobile Developer to join our product team. You will be responsible for developing new features and maintaining our existing cross-platform mobile application.
+
+Key Responsibilities:
+- Develop new features using Flutter and Dart.
+- Integrate with backend APIs and third-party SDKs.
+- Optimize application performance for a smooth user experience.
+- Fix bugs and address technical debt in the codebase.
+- Write clean, maintainable code and documentation.
+- Collaborate with designers to implement pixel-perfect UIs.
+
+Requirements:
+- Knowledge of object-oriented programming (OOP) principles.
+- Experience with any programming language (Java, Kotlin, Swift, or Dart).
+- Basic understanding of RESTful APIs and JSON.
+- Strong problem-solving skills.
+
+Nice-to-Have:
+- Familiarity with Flutter framework.
+- Experience with Firebase or other BaaS (Backend as a Service).
+- Knowledge of automated testing for mobile apps.
