@@ -1,0 +1,24 @@
+Job Title: Data Pipeline Engineer (Junior)
+Company: StreamFlow Data
+
+Job Description:
+We are looking for a Data Pipeline Engineer to build and maintain real-time data streaming systems. You will work with Apache Kafka and stream processing frameworks.
+
+Key Responsibilities:
+- Build and maintain real-time data ingestion pipelines using Apache Kafka.
+- Process streaming data using Apache Flink or Spark Streaming.
+- Integrate data from various sources (databases, APIs, logs).
+- Ensure data reliability and fault tolerance in streaming systems.
+- Monitor pipeline performance and resolve bottlenecks.
+- Collaborate with data analysts to meet data requirements.
+
+Requirements:
+- Experience with Python or Java programming.
+- Understanding of messaging systems (Kafka, RabbitMQ).
+- Knowledge of database systems (SQL and NoSQL).
+- Strong troubleshooting and debugging skills.
+
+Nice-to-Have:
+- Experience with Apache Flink or Spark Streaming.
+- Understanding of event-driven architecture.
+- Experience with containerization (Docker/Kubernetes).

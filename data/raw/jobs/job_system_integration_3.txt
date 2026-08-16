@@ -1,0 +1,24 @@
+Job Title: Junior Middleware Developer
+Company: MiddlewareTech Solutions
+
+Job Description:
+We are looking for a Junior Middleware Developer to support integration projects across the enterprise. You will build and maintain middleware components connecting diverse applications.
+
+Key Responsibilities:
+- Design and develop middleware integration components using Java.
+- Work with JMS (Java Message Service) and message queues.
+- Build REST APIs for system-to-system communication.
+- Transform and map data between XML and JSON formats.
+- Troubleshoot integration issues and performance bottlenecks.
+- Document integration architectures and deployment processes.
+
+Requirements:
+- Experience with Java programming language.
+- Understanding of RESTful APIs and web services (SOAP/REST).
+- Knowledge of XML, JSON, and data transformation.
+- Understanding of messaging (queues, topics).
+
+Nice-to-Have:
+- Experience with Spring Boot and Spring Integration.
+- Familiarity with Apache Camel or MuleSoft.
+- Understanding of Docker and containerization.

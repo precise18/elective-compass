@@ -1,0 +1,24 @@
+Job Title: Junior QA Engineer (Manual & Automation)
+Company: QualityAssure Inc.
+
+Job Description:
+We are looking for a detail-oriented QA Engineer to ensure the quality of our web and mobile applications. You will write test cases, perform manual testing, and build automated regression test suites.
+
+Key Responsibilities:
+- Design and maintain test plans, test cases, and test scripts.
+- Perform functional, regression, and integration testing.
+- Automate repetitive test cases using Selenium and Python/Java.
+- Report and track defects in JIRA or similar bug-tracking systems.
+- Collaborate with developers to understand features and dependencies.
+- Participate in exploratory testing to find edge-case bugs.
+
+Requirements:
+- Understanding of software testing principles (Test Automation Pyramid).
+- Ability to write clear and concise bug reports.
+- Basic programming skills (Python, Java, or JavaScript).
+- Strong analytical and critical thinking skills.
+
+Nice-to-Have:
+- Experience with Selenium WebDriver.
+- Knowledge of API testing (Postman).
+- ISTQB Foundation Certification is a plus.

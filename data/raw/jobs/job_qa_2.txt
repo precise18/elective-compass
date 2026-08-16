@@ -1,0 +1,23 @@
+Job Title: Software Test Analyst
+Company: Tech Quality Labs
+
+Job Description:
+We are looking for a Software Test Analyst to join our QA team. You will be responsible for validating software releases and ensuring a seamless user experience across different devices.
+
+Key Responsibilities:
+- Execute manual test cases for web and mobile applications.
+- Set up test environments and manage test data.
+- Develop automated test scripts using Selenium and Cucumber (BDD).
+- Perform performance testing using JMeter to identify bottlenecks.
+- Work in agile sprint cycles, attending standups and sprint planning.
+
+Requirements:
+- Knowledge of the software development life cycle (SDLC).
+- Experience with test management tools (TestRail, Zephyr).
+- Understanding of SQL (database validation).
+- High attention to detail and excellent communication.
+
+Nice-to-Have:
+- Experience with automated mobile testing (Appium).
+- Understanding of CI/CD pipelines and how testing fits in (Jenkins, Git).
+- Experience with Linux command line.

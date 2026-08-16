@@ -1,0 +1,24 @@
+Job Title: API Integration Engineer (Entry Level)
+Company: APIConnect Technologies
+
+Job Description:
+We are seeking an Entry Level API Integration Engineer to build and maintain integration solutions. You will design and develop robust APIs for internal and external systems.
+
+Key Responsibilities:
+- Design and develop RESTful APIs using Node.js or Python.
+- Implement secure authentication (OAuth2, JWT) and authorization.
+- Build integrations with third-party APIs and internal systems.
+- Write OpenAPI/Swagger documentation for APIs.
+- Monitor and troubleshoot integration workflows.
+- Collaborate with frontend and backend teams.
+
+Requirements:
+- Understanding of API design principles and best practices.
+- Programming knowledge (JavaScript, Python, or Java).
+- Understanding of HTTP, JSON, and REST.
+- Strong problem-solving and debugging skills.
+
+Nice-to-Have:
+- Experience with Postman and API testing tools.
+- Knowledge of microservices architecture.
+- Understanding of event-driven integration (Kafka, RabbitMQ).

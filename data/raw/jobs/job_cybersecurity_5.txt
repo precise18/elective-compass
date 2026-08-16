@@ -1,0 +1,25 @@
+Job Title: Junior Penetration Tester (Ethical Hacker)
+Company: SecureStack Security
+
+Job Description:
+We are looking for an enthusiastic Junior Penetration Tester to join our ethical hacking team. You will conduct vulnerability assessments and penetration tests on web applications, APIs, and network infrastructure.
+
+Key Responsibilities:
+- Conduct penetration tests on web applications and APIs using tools like Burp Suite and OWASP ZAP.
+- Perform network vulnerability scans using Nessus and OpenVAS.
+- Identify and exploit security vulnerabilities (SQL injection, XSS, CSRF).
+- Write detailed penetration test reports with remediation recommendations.
+- Participate in red team exercises and security assessments.
+- Research and document new exploit techniques.
+
+Requirements:
+- Understanding of OWASP Top 10 vulnerabilities.
+- Familiarity with Kali Linux and security tools (Nmap, Metasploit).
+- Basic knowledge of networking (TCP/IP, DNS, HTTP).
+- Strong problem-solving and analytical skills.
+- Excellent written communication for report writing.
+
+Nice-to-Have:
+- OSCP or eJPT certification.
+- Experience with Python or Ruby scripting.
+- Participation in CTF competitions.

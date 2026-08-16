@@ -1,0 +1,24 @@
+Job Title: iOS/Android App Developer (Entry Level)
+Company: MobileFirst Technologies
+
+Job Description:
+We are looking for an Entry Level Mobile App Developer to join our team. You will develop, test, and maintain mobile applications for iOS and Android platforms.
+
+Key Responsibilities:
+- Develop high-performance mobile applications using Flutter or native technologies.
+- Implement UI/UX designs with clean, maintainable code.
+- Integrate with RESTful APIs and JSON data.
+- Write unit tests and debug application issues.
+- Optimize application performance for Android and iOS.
+- Submit applications to Google Play and Apple App Store.
+
+Requirements:
+- Programming experience (Java, Kotlin, Swift, or Dart).
+- Understanding of mobile app lifecycle and development tools.
+- Knowledge of version control systems (Git).
+- Strong communication and teamwork skills.
+
+Nice-to-Have:
+- Experience with Flutter or React Native.
+- Knowledge of Firebase or AWS Amplify.
+- Previous mobile app development coursework or personal project.

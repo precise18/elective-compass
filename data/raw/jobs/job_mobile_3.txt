@@ -1,0 +1,24 @@
+Job Title: Junior Flutter Developer
+Company: AppInnovate Mobile
+
+Job Description:
+We are looking for a Junior Flutter Developer to join our mobile app development team. You will build and maintain cross-platform mobile applications using Flutter and Dart.
+
+Key Responsibilities:
+- Build responsive, pixel-perfect mobile UIs using Flutter.
+- Integrate Firebase services (Authentication, Firestore, Push Notifications).
+- Connect to RESTful APIs and handle state management.
+- Debug and resolve platform-specific issues (iOS/Android).
+- Write unit tests for widgets and business logic.
+- Participate in code reviews and agile ceremonies.
+
+Requirements:
+- Experience with Dart programming language.
+- Understanding of Flutter framework and widgets.
+- Knowledge of Git and version control.
+- Strong problem-solving skills.
+
+Nice-to-Have:
+- Experience with Provider or Riverpod state management.
+- Published a Flutter app on Google Play or Apple Store.
+- Knowledge of Firebase Cloud Functions.

@@ -1,0 +1,25 @@
+Job Title: Junior Security Operations Center (SOC) Analyst
+Company: CyberGuard Defense
+
+Job Description:
+We are seeking a motivated Junior SOC Analyst to join our 24/7 security operations team. You will monitor security alerts, investigate potential threats, and help protect client infrastructure from cyber attacks.
+
+Key Responsibilities:
+- Monitor SIEM platforms (Splunk, IBM QRadar) for security alerts.
+- Analyze network traffic and system logs to identify suspicious activity.
+- Triage and escalate security incidents according to playbooks.
+- Assist in vulnerability scanning and penetration testing activities.
+- Document incident response procedures and create reports.
+- Stay current on emerging cyber threats and attack techniques.
+
+Requirements:
+- Understanding of TCP/IP networking and OSI model.
+- Knowledge of Windows and Linux operating systems.
+- Familiarity with common attack vectors (phishing, malware, DDoS).
+- Excellent analytical and investigative skills.
+- Strong attention to detail and documentation.
+
+Nice-to-Have:
+- CompTIA Security+ or CySA+ certification.
+- Experience with Wireshark or tcpdump.
+- Basic scripting skills (Python, Bash).

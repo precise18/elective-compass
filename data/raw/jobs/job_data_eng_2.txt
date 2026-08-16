@@ -1,0 +1,23 @@
+Job Title: Data Operations Engineer
+Company: CloudStream Data Solutions
+
+Job Description:
+We are looking for a Data Operations Engineer to manage our data infrastructure. You will ensure data pipelines are reliable, scalable, and efficient to power business intelligence dashboards.
+
+Key Responsibilities:
+- Monitor and maintain production data pipelines.
+- Tune SQL queries for performance optimization.
+- Implement data validation and reconciliation checks.
+- Write scripts to automate data tasks (Python, Bash).
+- Maintain documentation for data lineage and processes.
+
+Requirements:
+- Knowledge of relational databases (PostgreSQL, MySQL).
+- Experience with SQL (joins, subqueries, window functions).
+- Familiarity with Linux environment and command line.
+- Strong attention to detail and ability to troubleshoot.
+
+Nice-to-Have:
+- Experience with Apache Spark or Hadoop.
+- Understanding of data warehousing concepts (Kimball/Inmon).
+- Experience with Tableau or Power BI is a bonus.

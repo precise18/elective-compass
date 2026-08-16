@@ -1,0 +1,24 @@
+Job Title: Junior Big Data Engineer
+Company: DataSphere Analytics
+
+Job Description:
+We are looking for a Junior Big Data Engineer to join our data infrastructure team. You will help build and maintain large-scale data processing systems using Apache Spark and Hadoop.
+
+Key Responsibilities:
+- Build and optimize ETL pipelines using Apache Spark (PySpark).
+- Process and transform large datasets using SQL and Python.
+- Manage data storage in Hadoop HDFS and AWS S3.
+- Implement data quality checks and validation rules.
+- Schedule and monitor data workflows using Apache Airflow.
+- Collaborate with data scientists to prepare data for machine learning models.
+
+Requirements:
+- Experience with Python and SQL.
+- Understanding of distributed computing concepts.
+- Knowledge of Linux/Unix environment and shell scripting.
+- Strong analytical and data modeling skills.
+
+Nice-to-Have:
+- Experience with Apache Spark (PySpark).
+- Familiarity with cloud platforms (AWS, GCP, Azure).
+- Understanding of streaming data processing (Kafka).

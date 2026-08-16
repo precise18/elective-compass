@@ -1,0 +1,24 @@
+Job Title: Junior Integration Support Engineer
+Company: Global Integration Services
+
+Job Description:
+We are looking for a Junior Integration Support Engineer to assist with monitoring, maintaining, and troubleshooting enterprise integration solutions.
+
+Key Responsibilities:
+- Monitor integration platforms and message queues for failures.
+- Troubleshoot and resolve integration issues with ETL and ESB tools.
+- Perform root cause analysis and document resolutions.
+- Work with middleware tools (Apache Camel, IBM MQ).
+- Assist in deployment of integration code to production.
+- Create and update integration documentation.
+
+Requirements:
+- Basic programming skills (Java, Python, or Shell scripting).
+- Understanding of networking fundamentals (TCP/IP, DNS).
+- Knowledge of XML/JSON and APIs (SOAP/REST).
+- Excellent communication and documentation skills.
+
+Nice-to-Have:
+- Experience with monitoring tools (Datadog, Splunk).
+- Understanding of message-oriented middleware (MOM).
+- Experience with Linux/Unix systems.

@@ -1,0 +1,24 @@
+Job Title: Junior Security Analyst (SOC Analyst)
+Company: SecureShield Networks
+
+Job Description:
+We are looking for a diligent Junior Security Analyst to join our Security Operations Center (SOC). You will monitor networks for threats, investigate security alerts, and help protect client infrastructure.
+
+Key Responsibilities:
+- Monitor security information and event management (SIEM) tools for alerts.
+- Investigate potential security incidents and determine their severity.
+- Analyze network traffic and system logs for malicious activities.
+- Assist in vulnerability assessments and penetration testing.
+- Develop and maintain security documentation and playbooks.
+- Stay informed on the latest cybersecurity threats and trends.
+
+Requirements:
+- Understanding of TCP/IP, networking, and common attack vectors.
+- Knowledge of Windows and Linux operating systems.
+- Excellent analytical and problem-solving skills.
+- Strong attention to detail.
+
+Nice-to-Have:
+- CompTIA Security+ or similar certification.
+- Experience with SIEM tools (Splunk, LogRhythm).
+- Familiarity with penetration testing tools (Nmap, Burp Suite, Wireshark).

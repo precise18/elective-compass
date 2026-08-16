@@ -1,0 +1,24 @@
+Job Title: Junior Data Engineer
+Company: DataFlow Analytics
+
+Job Description:
+We are looking for a Junior Data Engineer to help us build and maintain scalable data pipelines. You will work with large datasets, implement ETL processes, and support our data science team.
+
+Key Responsibilities:
+- Design and build robust ETL (Extract, Transform, Load) pipelines using Python.
+- Work with SQL and NoSQL databases (PostgreSQL, MongoDB).
+- Implement streaming data processing using Apache Kafka.
+- Orchestrate data workflows using Apache Airflow.
+- Ensure data quality and consistency across different sources.
+- Manage data storage solutions in cloud platforms (AWS S3, Redshift, GCP BigQuery).
+
+Requirements:
+- Experience with Python and SQL.
+- Understanding of database concepts and data modeling.
+- Knowledge of Linux/Unix systems and shell scripting.
+- Strong analytical and problem-solving skills.
+
+Nice-to-Have:
+- Familiarity with Apache Spark (PySpark).
+- Experience with cloud platforms (AWS, GCP, Azure).
+- Understanding of distributed computing principles.

@@ -1,0 +1,24 @@
+Job Title: Manual QA Tester (Entry Level)
+Company: AppTest Solutions
+
+Job Description:
+We are seeking a detail-oriented Manual QA Tester to join our quality assurance team. You will perform functional, regression, and user acceptance testing on web and mobile applications.
+
+Key Responsibilities:
+- Create and execute detailed test cases based on requirements.
+- Perform exploratory testing to identify edge cases.
+- Document bugs with clear steps to reproduce.
+- Verify bug fixes and perform regression testing.
+- Participate in sprint planning and daily stand-ups.
+- Create test data and manage test environments.
+
+Requirements:
+- Excellent attention to detail and observation skills.
+- Strong written and verbal communication skills.
+- Understanding of software testing lifecycle (STLC).
+- Ability to work in fast-paced, agile environment.
+
+Nice-to-Have:
+- Experience with JIRA or similar bug-tracking tools.
+- Basic understanding of SQL for database validation.
+- Understanding of API testing concepts.

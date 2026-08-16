@@ -1,0 +1,24 @@
+Job Title: Automation Test Engineer (Junior)
+Company: QualityFirst Technologies
+
+Job Description:
+We are looking for a Junior Automation Test Engineer to help build and maintain our test automation framework. You will write automated tests for web and mobile applications.
+
+Key Responsibilities:
+- Design and implement automated test scripts using Selenium WebDriver.
+- Develop API test automation using Postman and REST Assured.
+- Integrate automated tests into CI/CD pipelines (Jenkins, GitLab CI).
+- Execute test suites and analyze failures.
+- Participate in test case reviews and test planning sessions.
+- Maintain test documentation and defect reports.
+
+Requirements:
+- Basic programming skills (Python, Java, or JavaScript).
+- Understanding of test automation frameworks and principles.
+- Knowledge of web technologies (HTML, CSS, JSON, REST APIs).
+- Strong analytical and debugging skills.
+
+Nice-to-Have:
+- Experience with Selenium WebDriver and TestNG.
+- Experience with API testing (Postman, Newman).
+- ISTQB Foundation certification.

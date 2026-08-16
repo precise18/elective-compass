@@ -1,0 +1,23 @@
+Job Title: IT Security Intern (Penetration Testing)
+Company: BlackBox Security
+
+Job Description:
+We are looking for a motivated Penetration Testing intern to join our ethical hacking team. You will learn to identify vulnerabilities in web applications, APIs, and network infrastructure.
+
+Key Responsibilities:
+- Assist senior penetration testers in conducting assessments.
+- Use industry-standard tools (Burp Suite, OWASP ZAP, Metasploit) to identify security flaws.
+- Document findings and create detailed vulnerability reports.
+- Perform social engineering tests (phishing simulations).
+- Research emerging threats and exploit techniques.
+
+Requirements:
+- Passion for cybersecurity and ethical hacking.
+- Basic knowledge of networking (TCP/IP, firewalls).
+- Understanding of web application vulnerabilities (OWASP Top 10).
+- Strong verbal and written communication skills.
+
+Nice-to-Have:
+- Experience with Kali Linux and open-source security tools.
+- Participation in CTF (Capture The Flag) competitions.
+- Basic scripting knowledge (Python, Bash, or PowerShell).

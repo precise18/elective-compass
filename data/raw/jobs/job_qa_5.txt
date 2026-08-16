@@ -1,0 +1,24 @@
+Job Title: Junior Software Development Engineer in Test (SDET)
+Company: DevQuality Labs
+
+Job Description:
+We are looking for a Junior SDET to bridge the gap between development and quality assurance. You will build test infrastructure and write automated tests to ensure software quality.
+
+Key Responsibilities:
+- Design and develop automated test frameworks from scratch.
+- Write unit, integration, and end-to-end tests.
+- Integrate test automation into CI/CD pipelines.
+- Implement performance and load testing using JMeter.
+- Collaborate with developers to understand features and dependencies.
+- Maintain test environments and test data.
+
+Requirements:
+- Programming experience in Python, Java, or JavaScript.
+- Understanding of object-oriented programming principles.
+- Knowledge of Git and version control.
+- Problem-solving and analytical thinking.
+
+Nice-to-Have:
+- Experience with Selenium, JUnit, or TestNG.
+- Understanding of BDD (Behavior Driven Development) tools like Cucumber.
+- Experience with performance testing (JMeter).

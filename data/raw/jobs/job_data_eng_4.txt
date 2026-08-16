@@ -1,0 +1,24 @@
+Job Title: Data Warehousing Engineer (Entry Level)
+Company: CloudData Systems
+
+Job Description:
+We are seeking an Entry Level Data Warehousing Engineer to help design and maintain our cloud-based data warehouse. You will work with ETL tools and modern data platforms.
+
+Key Responsibilities:
+- Design and implement data warehouse models using Star and Snowflake schemas.
+- Build ETL pipelines to load data into Snowflake and Redshift.
+- Write complex SQL queries for data analysis and reporting.
+- Monitor data quality and troubleshoot pipeline failures.
+- Optimize query performance for large datasets.
+- Document data lineage and transformation logic.
+
+Requirements:
+- Strong SQL skills (joins, CTEs, window functions).
+- Understanding of data warehousing concepts (Kimball/Inmon).
+- Knowledge of Python or another scripting language.
+- Attention to detail and data accuracy.
+
+Nice-to-Have:
+- Experience with dbt (data build tool).
+- Familiarity with Snowflake or AWS Redshift.
+- Understanding of ETL/ELT best practices.
