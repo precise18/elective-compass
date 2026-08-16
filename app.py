@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
-import pickle
 import os
+import glob
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import glob
 
-# Page configuration
+# Set page config FIRST (must be the first Streamlit command)
 st.set_page_config(
     page_title="🎓 Elective Compass",
     page_icon="🧭",
@@ -17,12 +16,14 @@ st.set_page_config(
 st.title("🧭 Elective Compass")
 st.subheader("Find Your Perfect Elective Match")
 
+# Get the directory where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Load data
 @st.cache_data
 def load_data():
-    # Load all text files
-    job_path = "data/raw/jobs/*.txt"
-    syllabus_path = "data/raw/syllabus_*.txt"
+    job_path = os.path.join(BASE_DIR, "data/raw/jobs/*.txt")
+    syllabus_path = os.path.join(BASE_DIR, "data/raw/syllabus_*.txt")
     
     job_files = glob.glob(job_path)
     job_data = []
@@ -74,60 +75,97 @@ with st.sidebar:
     st.write("1. Select an elective below")
     st.write("2. See top job matches")
     st.write("3. Make your decision!")
+    st.write("---")
+    st.write("🔢 **Match Scores:**")
+    st.write("🟢 **> 30%** = Strong match")
+    st.write("🟡 **15-30%** = Moderate match")
+    st.write("🔴 **< 15%** = Weak match")
 
 # Main content
 st.write("### 🔍 Select an Elective")
 
-# Create columns for better layout
-col1, col2 = st.columns(2)
+# --- FIX: Remove duplicate electives from dropdown ---
+# Create a mapping from display name to actual syllabus filename
+elective_map = {}
+for name in syllabi_names:
+    # Remove 'syllabus_' prefix
+    clean_name = name.replace('syllabus_', '')
+    # Remove numbers and underscores at the end (like _1, _2, etc.)
+    base_name = clean_name.rstrip('0123456789_')
+    display_name = base_name.replace('_', ' ').title()
+    # Keep the first occurrence only
+    if display_name not in elective_map:
+        elective_map[display_name] = name
 
-with col1:
-    # Dropdown for electives
-    elective_names = [name.replace('syllabus_', '').replace('_', ' ').title() for name in syllabi_names]
-    selected_elective = st.selectbox("Choose an elective:", elective_names)
+elective_display_names = list(elective_map.keys())
 
-# Find the selected syllabus
-selected_idx = elective_names.index(selected_elective)
-selected_syllabus = syllabi_names[selected_idx]
+# Dropdown with unique electives
+selected_display = st.selectbox("Choose an elective:", elective_display_names)
 
-# Get similarity scores
+# Get the actual syllabus filename
+selected_syllabus = elective_map[selected_display]
+
+# --- Get similarity scores for the selected syllabus ---
 scores = similarity_df.loc[selected_syllabus]
 top_matches = scores.sort_values(ascending=False).head(5)
 
+# --- Display Results ---
+st.write(f"### 📊 Top 5 Job Matches for **{selected_display}**")
+
+# Create columns for better layout
+col1, col2 = st.columns([2, 1])
+
+with col1:
+    for job, score in top_matches.items():
+        job_name = job.replace('job_', '').replace('_', ' ').title()
+        
+        # Color coding based on score
+        if score > 0.3:
+            color = "🟢"
+            label = "Strong match"
+        elif score > 0.15:
+            color = "🟡"
+            label = "Moderate match"
+        else:
+            color = "🔴"
+            label = "Weak match"
+        
+        st.write(f"{color} **{job_name}**")
+        st.progress(min(score, 1.0), text=f"Score: {score:.2%} - {label}")
+        st.write("---")
+
 with col2:
-    st.write(f"### 📊 Top 5 Job Matches")
-    st.write(f"**{selected_elective}**")
-
-# Display results
-for idx, (job, score) in enumerate(top_matches.items()):
-    job_name = job.replace('job_', '').replace('_', ' ').title()
+    # Show the top match prominently
+    top_job = top_matches.index[0]
+    top_score = top_matches.iloc[0]
+    job_name = top_job.replace('job_', '').replace('_', ' ').title()
     
-    # Create a progress bar for visual similarity
-    progress = int(score * 100)
+    st.metric(
+        label="🏆 Best Match",
+        value=job_name,
+        delta=f"{top_score:.2%}",
+        delta_color="normal"
+    )
     
-    # Color coding based on score
-    if score > 0.3:
-        color = "🟢"
-    elif score > 0.15:
-        color = "🟡"
+    if top_score > 0.3:
+        st.success("✅ This elective strongly aligns with this career path!")
+    elif top_score > 0.15:
+        st.warning("⚠️ This elective has moderate alignment with this career path.")
     else:
-        color = "🔴"
-    
-    st.write(f"{color} **{job_name}**")
-    st.progress(progress / 100, text=f"Match Score: {score:.2%}")
-    st.write("---")
+        st.info("ℹ️ This elective may prepare you for broader roles.")
 
-# Additional info
+# --- All Matches Table (Optional) ---
+with st.expander("📋 See all matches"):
+    # Create a DataFrame with all matches sorted
+    all_scores = scores.sort_values(ascending=False)
+    all_matches_df = pd.DataFrame({
+        'Job Title': [job.replace('job_', '').replace('_', ' ').title() for job in all_scores.index],
+        'Match Score': [f"{score:.2%}" for score in all_scores.values],
+        'Similarity': [f"{score:.3f}" for score in all_scores.values]
+    })
+    st.dataframe(all_matches_df, use_container_width=True)
+
+# --- Footer ---
 st.write("---")
-st.write("### 💡 What this means")
-
-if top_matches.iloc[0] > 0.3:
-    st.success(f"✅ **Strong match!** {selected_elective} is highly aligned with {top_matches.index[0].replace('job_', '').replace('_', ' ').title()}")
-elif top_matches.iloc[0] > 0.15:
-    st.warning(f"⚠️ **Moderate match.** {selected_elective} has some alignment with {top_matches.index[0].replace('job_', '').replace('_', ' ').title()}")
-else:
-    st.info(f"ℹ️ **Explore options.** {selected_elective} may prepare you for roles beyond traditional job titles.")
-
-# Footer
-st.write("---")
-st.caption("🎓 Elective Compass • Built with ❤️ using NLP")
+st.caption("🎓 Elective Compass • Built with ❤️ using NLP and Streamlit")
+st.caption("📊 Data: 7 Electives × 5 Job Descriptions each = 35 job postings")
