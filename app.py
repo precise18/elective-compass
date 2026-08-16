@@ -173,10 +173,12 @@ render_html("""
         font-weight: 400;
         color: #8b6878;
         max-width: 650px;
-        margin: 1.2rem auto 0 auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 1.2rem;
+        text-align: center !important;
         line-height: 1.8;
     }
-
 
     .hero-divider {
         width: 70px;
