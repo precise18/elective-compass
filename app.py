@@ -2,533 +2,1258 @@ import streamlit as st
 import pandas as pd
 import os
 import glob
+import textwrap
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Set page config FIRST (must be the first Streamlit command)
+
+# ============================================================
+# PAGE CONFIG
+# ============================================================
+
 st.set_page_config(
     page_title="Elective Compass",
-    page_icon=":material/explore:",
+    page_icon="✦",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# ---------------------------------------------------------
-# CUSTOM STYLING
-# ---------------------------------------------------------
 
-st.markdown("""
+# ============================================================
+# HELPER FOR CUSTOM HTML
+# ============================================================
+
+def render_html(html):
+    """
+    Removes indentation from multiline HTML before sending it
+    to Streamlit so the HTML is rendered instead of displayed
+    as a code block.
+    """
+    st.markdown(
+        textwrap.dedent(html),
+        unsafe_allow_html=True
+    )
+
+
+# ============================================================
+# CUSTOM DESIGN / CSS
+# ============================================================
+
+render_html("""
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+    /* --------------------------------------------------------
+       IMPORT FONTS
+    -------------------------------------------------------- */
 
-/* ---------- GLOBAL ---------- */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-html, body, [class*="css"] {
-    font-family: 'Poppins', sans-serif;
-}
 
-.stApp {
-    background: linear-gradient(
-        135deg,
-        #fff8fb 0%,
-        #fff 45%,
-        #fff5f9 100%
-    );
-    color: #332936;
-}
+    /* --------------------------------------------------------
+       GLOBAL APP
+    -------------------------------------------------------- */
 
-/* ---------- MAIN CONTENT ---------- */
+    .stApp {
+        background:
+            radial-gradient(
+                circle at 90% 5%,
+                rgba(255, 226, 239, 0.55),
+                transparent 25%
+            ),
+            radial-gradient(
+                circle at 10% 90%,
+                rgba(255, 239, 246, 0.65),
+                transparent 30%
+            ),
+            #fffafd;
+    }
 
-.block-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    max-width: 1200px;
-}
 
-/* ---------- HEADINGS ---------- */
+    /* Main content */
 
-h1, h2, h3 {
-    font-family: 'DM Serif Display', serif !important;
-    color: #3b2635 !important;
-}
+    .main .block-container {
+        max-width: 1200px;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 
-h1 {
-    font-size: 3.2rem !important;
-    letter-spacing: -1px;
-}
 
-h2 {
-    font-size: 2rem !important;
-}
+    /* --------------------------------------------------------
+       STREAMLIT HEADER
+    -------------------------------------------------------- */
 
-h3 {
-    font-size: 1.5rem !important;
-}
+    header[data-testid="stHeader"] {
+        background: rgba(255, 250, 253, 0.90);
+    }
 
-/* ---------- SIDEBAR ---------- */
 
-section[data-testid="stSidebar"] {
-    background: linear-gradient(
-        180deg,
-        #fff0f6 0%,
-        #ffe4ef 100%
-    );
-    border-right: 1px solid #f4c5d8;
-}
+    /* --------------------------------------------------------
+       SIDEBAR
+    -------------------------------------------------------- */
 
-section[data-testid="stSidebar"] h1,
-section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3 {
-    color: #4a3040 !important;
-}
+    section[data-testid="stSidebar"] {
+        background:
+            linear-gradient(
+                180deg,
+                #fff0f6 0%,
+                #ffe5f0 45%,
+                #fff8fb 100%
+            );
 
-/* ---------- SELECT BOX ---------- */
+        border-right: 1px solid #f1cada;
+    }
 
-div[data-baseweb="select"] > div {
-    background-color: #fff;
-    border: 1.5px solid #efb5cc;
-    border-radius: 14px;
-}
 
-div[data-baseweb="select"] > div:hover {
-    border-color: #d98aaa;
-}
+    section[data-testid="stSidebar"] > div {
+        padding-top: 2rem;
+    }
 
-/* ---------- PROGRESS BAR ---------- */
 
-div[data-testid="stProgress"] > div > div {
-    background-color: #f3d6e1;
-}
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {
+        font-family: 'DM Serif Display', serif !important;
+        color: #4a3040 !important;
+    }
 
-div[data-testid="stProgress"] > div > div > div {
-    background: linear-gradient(
-        90deg,
-        #e89ab8,
-        #d979a1
-    );
-}
 
-/* ---------- METRIC CARD ---------- */
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] label {
+        font-family: 'Poppins', sans-serif !important;
+        color: #6f5362;
+    }
 
-div[data-testid="stMetric"] {
-    background: #ffffff;
-    border: 1px solid #f1cada;
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(190, 110, 145, 0.10);
-}
 
-div[data-testid="stMetricLabel"] {
-    color: #8b6075 !important;
-}
+    /* --------------------------------------------------------
+       HERO SECTION
+    -------------------------------------------------------- */
 
-div[data-testid="stMetricValue"] {
-    color: #4a3040 !important;
-    font-family: 'DM Serif Display', serif !important;
-}
+    .hero {
+        text-align: center;
+        padding: 1rem 1rem 3rem 1rem;
+    }
 
-/* ---------- ALERTS ---------- */
 
-div[data-testid="stAlert"] {
-    border-radius: 16px;
-}
-
-/* ---------- EXPANDER ---------- */
-
-div[data-testid="stExpander"] {
-    border: 1px solid #f0c7d7;
-    border-radius: 16px;
-    background-color: #fff;
-}
-
-/* ---------- DATAFRAME ---------- */
-
-div[data-testid="stDataFrame"] {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-/* ---------- DIVIDERS ---------- */
-
-hr {
-    border-color: #f1d3df !important;
-}
-
-/* ---------- CAPTIONS ---------- */
-
-.stCaption {
-    color: #967486 !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-# Title
-# ---------------------------------------------------------
-# HERO SECTION
-# ---------------------------------------------------------
-
-st.markdown("""
-<div style="
-    text-align: center;
-    padding: 2rem 1rem 3rem 1rem;
-">
-
-    <div style="
+    .hero-sparkle {
         font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
         color: #d47d9f;
-        font-size: 0.9rem;
+        letter-spacing: 8px;
+        margin-bottom: 0.7rem;
+    }
+
+
+    .hero-eyebrow {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #b47791;
+        margin-bottom: 0.8rem;
+    }
+
+
+    .hero-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 4.2rem;
+        line-height: 1.05;
+        color: #4a3040;
+        margin: 0;
+    }
+
+
+    .hero-subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 400;
+        color: #8b6878;
+        max-width: 650px;
+        margin: 1.2rem auto 0 auto;
+        line-height: 1.8;
+    }
+
+
+    .hero-divider {
+        width: 70px;
+        height: 3px;
+        background: #dfa0bb;
+        border-radius: 50px;
+        margin: 1.8rem auto 0 auto;
+    }
+
+
+    /* --------------------------------------------------------
+       SECTION HEADINGS
+    -------------------------------------------------------- */
+
+    .section-eyebrow {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.72rem;
         font-weight: 600;
         letter-spacing: 3px;
         text-transform: uppercase;
-        margin-bottom: 12px;
-    ">
-        ✦ Career • Skills • Direction ✦
+        color: #c27c99;
+        margin-bottom: 0.35rem;
+    }
+
+
+    .section-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 2.1rem;
+        color: #4a3040;
+        margin-bottom: 0.3rem;
+    }
+
+
+    .section-description {
+        font-family: 'Poppins', sans-serif;
+        color: #8b6878;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* --------------------------------------------------------
+       SIDEBAR BRAND
+    -------------------------------------------------------- */
+
+    .sidebar-brand {
+        text-align: center;
+        padding: 0.8rem 0 2rem 0;
+    }
+
+
+    .sidebar-symbol {
+        font-size: 2rem;
+        color: #d47d9f;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .sidebar-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.7rem;
+        color: #4a3040;
+    }
+
+
+    .sidebar-subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.72rem;
+        color: #a47788;
+        letter-spacing: 1px;
+        margin-top: 0.25rem;
+    }
+
+
+    /* --------------------------------------------------------
+       SIDEBAR INFO CARDS
+    -------------------------------------------------------- */
+
+    .info-card {
+        background: rgba(255, 255, 255, 0.80);
+        border: 1px solid #f1cada;
+        border-radius: 18px;
+        padding: 1rem;
+        margin-bottom: 0.8rem;
+        box-shadow: 0 5px 20px rgba(180, 110, 140, 0.06);
+    }
+
+
+    .info-number {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.8rem;
+        color: #4a3040;
+    }
+
+
+    .info-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.75rem;
+        color: #a47788;
+        margin-top: 0.1rem;
+    }
+
+
+    .sidebar-heading {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.25rem;
+        color: #4a3040;
+        margin: 1.8rem 0 0.8rem 0;
+    }
+
+
+    .sidebar-step {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.78rem;
+        color: #76596a;
+        line-height: 1.7;
+        padding: 0.45rem 0;
+    }
+
+
+    .step-number {
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f5c7da;
+        color: #70455a;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-right: 0.45rem;
+    }
+
+
+    /* --------------------------------------------------------
+       ELECTIVE SELECTOR
+    -------------------------------------------------------- */
+
+    .selector-card {
+        background: #ffffff;
+        border: 1px solid #f1cada;
+        border-radius: 22px;
+        padding: 1.3rem 1.4rem 0.7rem 1.4rem;
+        box-shadow: 0 8px 30px rgba(180, 110, 140, 0.07);
+        margin-bottom: 2rem;
+    }
+
+
+    /* Selectbox */
+
+    div[data-baseweb="select"] > div {
+        background-color: #fff8fb !important;
+        border: 1px solid #efbfd3 !important;
+        border-radius: 14px !important;
+    }
+
+
+    div[data-baseweb="select"] span {
+        font-family: 'Poppins', sans-serif !important;
+        color: #4a3040 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       CAREER MATCH CARDS
+    -------------------------------------------------------- */
+
+    .match-card {
+        background: #ffffff;
+        border: 1px solid #f1cada;
+        border-radius: 20px;
+        padding: 1.25rem 1.35rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 7px 25px rgba(180, 110, 140, 0.06);
+    }
+
+
+    .match-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+    }
+
+
+    .job-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.35rem;
+        color: #4a3040;
+    }
+
+
+    .match-badge {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 0.35rem 0.7rem;
+        border-radius: 50px;
+    }
+
+
+    .strong-badge {
+        background: #f3f9ef;
+        color: #67934e;
+    }
+
+
+    .moderate-badge {
+        background: #fff7e8;
+        color: #b28128;
+    }
+
+
+    .weak-badge {
+        background: #fff0f1;
+        color: #b15d67;
+    }
+
+
+    .score-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.75rem;
+        color: #8b6878;
+        margin-bottom: 0.35rem;
+    }
+
+
+    .progress-background {
+        height: 8px;
+        background: #f5dce7;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            #d98aaa,
+            #edb3c9
+        );
+        border-radius: 50px;
+    }
+
+
+    /* --------------------------------------------------------
+       BEST MATCH CARD
+    -------------------------------------------------------- */
+
+    .best-match-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #c27c99;
+        margin-bottom: 0.7rem;
+    }
+
+
+    .best-match-card {
+        background:
+            linear-gradient(
+                145deg,
+                #ffffff 0%,
+                #fff4f8 100%
+            );
+        border: 1px solid #efbfd3;
+        border-radius: 24px;
+        padding: 1.8rem;
+        box-shadow: 0 12px 35px rgba(180, 110, 140, 0.10);
+        margin-bottom: 1rem;
+    }
+
+
+    .best-match-small {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.75rem;
+        color: #8b6878;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .best-match-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 2.2rem;
+        color: #4a3040;
+        margin-bottom: 0.7rem;
+    }
+
+
+    .similarity-pill {
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #6c9857;
+        background: #eff8eb;
+        border-radius: 50px;
+        padding: 0.4rem 0.75rem;
+    }
+
+
+    .recommendation {
+        border-radius: 18px;
+        padding: 1rem 1.1rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+
+
+    .recommendation-strong {
+        background: #eef8eb;
+        color: #557a49;
+        border: 1px solid #d9ebd2;
+    }
+
+
+    .recommendation-moderate {
+        background: #fff8e9;
+        color: #8c6d32;
+        border: 1px solid #f4e5bd;
+    }
+
+
+    .recommendation-weak {
+        background: #fff2f3;
+        color: #98616a;
+        border: 1px solid #f0d4d8;
+    }
+
+
+    /* --------------------------------------------------------
+       EXPANDER
+    -------------------------------------------------------- */
+
+    div[data-testid="stExpander"] {
+        border: 1px solid #f1cada !important;
+        border-radius: 18px !important;
+        background: #ffffff !important;
+    }
+
+
+    div[data-testid="stExpander"] summary {
+        font-family: 'Poppins', sans-serif !important;
+        color: #4a3040 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       DATAFRAME
+    -------------------------------------------------------- */
+
+    div[data-testid="stDataFrame"] {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER
+    -------------------------------------------------------- */
+
+    .footer {
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+        border-top: 1px solid #f1cada;
+        margin-top: 3rem;
+    }
+
+
+    .footer-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.1rem;
+        color: #4a3040;
+    }
+
+
+    .footer-text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+        color: #a47788;
+        margin-top: 0.4rem;
+    }
+
+
+    /* --------------------------------------------------------
+       HIDE DEFAULT STREAMLIT BRANDING
+    -------------------------------------------------------- */
+
+    #MainMenu {
+        visibility: hidden;
+    }
+
+
+    footer {
+        visibility: hidden;
+    }
+
+
+</style>
+""")
+
+
+# ============================================================
+# GET BASE DIRECTORY
+# ============================================================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+# ============================================================
+# LOAD DATA
+# ============================================================
+
+@st.cache_data
+def load_data():
+
+    job_path = os.path.join(BASE_DIR, "data/raw/jobs/*.txt")
+    syllabus_path = os.path.join(BASE_DIR, "data/raw/syllabus_*.txt")
+
+    job_files = glob.glob(job_path)
+
+    job_data = []
+
+    for file in job_files:
+
+        with open(file, "r", encoding="utf-8") as f:
+            text = f.read()
+
+        filename = os.path.basename(file).replace(".txt", "")
+
+        job_data.append({
+            "filename": filename,
+            "text": text,
+            "type": "job"
+        })
+
+
+    syllabus_files = glob.glob(syllabus_path)
+
+    syllabus_data = []
+
+    for file in syllabus_files:
+
+        with open(file, "r", encoding="utf-8") as f:
+            text = f.read()
+
+        filename = os.path.basename(file).replace(".txt", "")
+
+        syllabus_data.append({
+            "filename": filename,
+            "text": text,
+            "type": "syllabus"
+        })
+
+
+    return pd.DataFrame(job_data + syllabus_data)
+
+
+all_data = load_data()
+
+
+# ============================================================
+# TF-IDF
+# ============================================================
+
+@st.cache_data
+def get_tfidf_matrix(data):
+
+    vectorizer = TfidfVectorizer(
+        max_features=1000,
+        stop_words="english"
+    )
+
+    tfidf_matrix = vectorizer.fit_transform(
+        data["text"]
+    )
+
+    return tfidf_matrix, vectorizer
+
+
+tfidf_matrix, vectorizer = get_tfidf_matrix(all_data)
+
+
+# ============================================================
+# SEPARATE SYLLABI AND JOBS
+# ============================================================
+
+syllabi_indices = all_data[
+    all_data["type"] == "syllabus"
+].index
+
+job_indices = all_data[
+    all_data["type"] == "job"
+].index
+
+
+syllabi_names = all_data.loc[
+    syllabi_indices,
+    "filename"
+].values
+
+
+job_names = all_data.loc[
+    job_indices,
+    "filename"
+].values
+
+
+# ============================================================
+# CALCULATE SIMILARITY
+# ============================================================
+
+similarity_matrix = cosine_similarity(
+    tfidf_matrix[syllabi_indices],
+    tfidf_matrix[job_indices]
+)
+
+
+similarity_df = pd.DataFrame(
+    similarity_matrix,
+    index=syllabi_names,
+    columns=job_names
+)
+
+
+# ============================================================
+# ELECTIVE NAME MAPPING
+# ============================================================
+
+ELECTIVE_NAME_MAP = {
+
+    "cloud": "Cloud Computing",
+
+    "mobile": "Mobile Development",
+
+    "blockchain": "Blockchain Development",
+
+    "cybersecurity": "Cybersecurity",
+
+    "data_eng": "Data Engineering",
+
+    "system_integration": "System Integration",
+
+    "qa": "Quality Assurance (QA)"
+}
+
+
+# Reverse mapping:
+# display name -> syllabus filename
+
+DISPLAY_TO_FILE = {}
+
+
+for name in syllabi_names:
+
+    clean_name = name.replace(
+        "syllabus_",
+        ""
+    )
+
+    base_name = clean_name.rstrip(
+        "0123456789_"
+    )
+
+
+    if base_name in ELECTIVE_NAME_MAP:
+
+        display_name = ELECTIVE_NAME_MAP[
+            base_name
+        ]
+
+    else:
+
+        display_name = (
+            base_name
+            .replace("_", " ")
+            .title()
+        )
+
+
+    if display_name not in DISPLAY_TO_FILE:
+
+        DISPLAY_TO_FILE[
+            display_name
+        ] = name
+
+
+elective_display_names = list(
+    DISPLAY_TO_FILE.keys()
+)
+
+
+# ============================================================
+# SIDEBAR
+# ============================================================
+
+with st.sidebar:
+
+    render_html("""
+    <div class="sidebar-brand">
+
+        <div class="sidebar-symbol">
+            ✦
+        </div>
+
+        <div class="sidebar-title">
+            Elective Compass
+        </div>
+
+        <div class="sidebar-subtitle">
+            CAREER • SKILLS • DIRECTION
+        </div>
+
+    </div>
+    """)
+
+
+    render_html(f"""
+    <div class="sidebar-heading">
+        Quick Information
     </div>
 
-    <h1 style="
-        font-family: 'DM Serif Display', serif;
-        font-size: 4.2rem;
-        color: #3b2635;
-        margin-bottom: 10px;
-    ">
+    <div class="info-card">
+
+        <div class="info-number">
+            {len(syllabi_names)}
+        </div>
+
+        <div class="info-label">
+            Electives
+        </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-number">
+            {len(job_names)}
+        </div>
+
+        <div class="info-label">
+            Job descriptions
+        </div>
+
+    </div>
+    """)
+
+
+    render_html("""
+    <div class="sidebar-heading">
+        How it works
+    </div>
+
+    <div class="sidebar-step">
+        <span class="step-number">1</span>
+        Select an elective
+    </div>
+
+    <div class="sidebar-step">
+        <span class="step-number">2</span>
+        Explore career matches
+    </div>
+
+    <div class="sidebar-step">
+        <span class="step-number">3</span>
+        Compare your results
+    </div>
+
+    <div class="sidebar-step">
+        <span class="step-number">4</span>
+        Make your decision
+    </div>
+    """)
+
+
+    render_html("""
+    <div class="sidebar-heading">
+        Match Scores
+    </div>
+
+    <div class="sidebar-step">
+        <span style="
+            color:#78a96b;
+            font-size:1.1rem;
+        ">●</span>
+
+        <strong>Above 30%</strong>
+        &nbsp; Strong match
+    </div>
+
+    <div class="sidebar-step">
+        <span style="
+            color:#d9a441;
+            font-size:1.1rem;
+        ">●</span>
+
+        <strong>15–30%</strong>
+        &nbsp; Moderate match
+    </div>
+
+    <div class="sidebar-step">
+        <span style="
+            color:#c66c78;
+            font-size:1.1rem;
+        ">●</span>
+
+        <strong>Below 15%</strong>
+        &nbsp; Weak match
+    </div>
+    """)
+
+
+# ============================================================
+# HERO
+# ============================================================
+
+render_html("""
+<div class="hero">
+
+    <div class="hero-sparkle">
+        ✦ ♡ ✦
+    </div>
+
+    <div class="hero-eyebrow">
+        Career • Skills • Direction
+    </div>
+
+    <h1 class="hero-title">
         Elective Compass
     </h1>
 
-    <p style="
-        font-family: 'Poppins', sans-serif;
-        color: #8b6075;
-        font-size: 1.15rem;
-        margin: 0 auto;
-        max-width: 650px;
-    ">
+    <p class="hero-subtitle">
         Find the elective that aligns with your future.
         Explore career paths, discover job opportunities,
         and make your decision with confidence.
     </p>
 
-    <div style="
-        margin-top: 25px;
-        color: #d98aaa;
-        font-size: 1.3rem;
-    ">
-        ♡ &nbsp; Your career journey starts here &nbsp; ♡
+    <div class="hero-divider"></div>
+
+</div>
+""")
+
+
+# ============================================================
+# ELECTIVE SELECTION
+# ============================================================
+
+render_html("""
+<div class="section-eyebrow">
+    Start here
+</div>
+
+<div class="section-title">
+    Choose your elective
+</div>
+
+<div class="section-description">
+    Select an elective to discover which career opportunities
+    align most closely with its skills and content.
+</div>
+""")
+
+
+selected_display = st.selectbox(
+    "Choose an elective:",
+    elective_display_names,
+    label_visibility="collapsed"
+)
+
+
+# ============================================================
+# GET SELECTED SYLLABUS
+# ============================================================
+
+selected_syllabus = DISPLAY_TO_FILE[
+    selected_display
+]
+
+
+# ============================================================
+# GET SIMILARITY SCORES
+# ============================================================
+
+scores = similarity_df.loc[
+    selected_syllabus
+]
+
+
+top_matches = scores.sort_values(
+    ascending=False
+).head(5)
+
+
+# ============================================================
+# RESULTS HEADING
+# ============================================================
+
+render_html(f"""
+<div style="
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+">
+
+    <div class="section-eyebrow">
+        Your results
+    </div>
+
+    <div class="section-title">
+        Top Career Matches
+    </div>
+
+    <div class="section-description">
+        Showing the strongest job-description matches
+        for <strong>{selected_display}</strong>.
     </div>
 
 </div>
-""", unsafe_allow_html=True)
+""")
 
-# Get the directory where app.py is located
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Load data
-@st.cache_data
-def load_data():
-    job_path = os.path.join(BASE_DIR, "data/raw/jobs/*.txt")
-    syllabus_path = os.path.join(BASE_DIR, "data/raw/syllabus_*.txt")
-    
-    job_files = glob.glob(job_path)
-    job_data = []
-    for file in job_files:
-        with open(file, 'r', encoding='utf-8') as f:
-            text = f.read()
-            filename = os.path.basename(file).replace('.txt', '')
-            job_data.append({'filename': filename, 'text': text, 'type': 'job'})
-    
-    syllabus_files = glob.glob(syllabus_path)
-    syllabus_data = []
-    for file in syllabus_files:
-        with open(file, 'r', encoding='utf-8') as f:
-            text = f.read()
-            filename = os.path.basename(file).replace('.txt', '')
-            syllabus_data.append({'filename': filename, 'text': text, 'type': 'syllabus'})
-    
-    return pd.DataFrame(job_data + syllabus_data)
+# ============================================================
+# RESULTS COLUMNS
+# ============================================================
 
-# Load and process
-all_data = load_data()
+col1, col2 = st.columns(
+    [1.65, 0.9],
+    gap="large"
+)
 
-# TF-IDF
-@st.cache_data
-def get_tfidf_matrix(data):
-    vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
-    tfidf_matrix = vectorizer.fit_transform(data['text'])
-    return tfidf_matrix, vectorizer
 
-tfidf_matrix, vectorizer = get_tfidf_matrix(all_data)
-
-# Separate syllabi and jobs
-syllabi_indices = all_data[all_data['type'] == 'syllabus'].index
-job_indices = all_data[all_data['type'] == 'job'].index
-syllabi_names = all_data.loc[syllabi_indices, 'filename'].values
-job_names = all_data.loc[job_indices, 'filename'].values
-
-# Calculate similarity
-similarity_matrix = cosine_similarity(tfidf_matrix[syllabi_indices], tfidf_matrix[job_indices])
-similarity_df = pd.DataFrame(similarity_matrix, index=syllabi_names, columns=job_names)
-
-# --- ELECTIVE NAME MAPPING (Full Names) ---
-# Map short names to full display names
-ELECTIVE_NAME_MAP = {
-    'cloud': 'Cloud Computing',
-    'mobile': 'Mobile Development',
-    'blockchain': 'Blockchain Development',
-    'cybersecurity': 'Cybersecurity',
-    'data_eng': 'Data Engineering',
-    'system_integration': 'System Integration',
-    'qa': 'Quality Assurance (QA)'
-}
-
-# Reverse mapping: display name -> syllabus filename
-DISPLAY_TO_FILE = {}
-
-for name in syllabi_names:
-    # Remove 'syllabus_' prefix
-    clean_name = name.replace('syllabus_', '')
-    # Remove numbers and underscores at the end (like _1, _2, etc.)
-    base_name = clean_name.rstrip('0123456789_')
-    # Get the full display name from the map
-    if base_name in ELECTIVE_NAME_MAP:
-        display_name = ELECTIVE_NAME_MAP[base_name]
-    else:
-        # Fallback: convert to title case
-        display_name = base_name.replace('_', ' ').title()
-    # Keep the first occurrence only
-    if display_name not in DISPLAY_TO_FILE:
-        DISPLAY_TO_FILE[display_name] = name
-
-elective_display_names = list(DISPLAY_TO_FILE.keys())
-
-# Sidebar
-with st.sidebar:
-
-    st.markdown("""
-    <div style="
-        text-align: center;
-        padding: 10px 0 25px 0;
-    ">
-        <div style="
-            font-size: 2rem;
-            color: #d47d9f;
-        ">✦</div>
-
-        <div style="
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.7rem;
-            color: #4a3040;
-        ">
-            Elective Compass
-        </div>
-
-        <div style="
-            font-size: 0.8rem;
-            color: #9b7185;
-            margin-top: 5px;
-        ">
-            Find your direction ♡
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("### Quick Info")
-
-    st.markdown(f"""
-    <div style="
-        background: white;
-        padding: 14px;
-        border-radius: 14px;
-        margin-bottom: 10px;
-        border: 1px solid #f1cada;
-    ">
-        <strong>{len(syllabi_names)}</strong><br>
-        <span style="color:#967486;">Electives</span>
-    </div>
-
-    <div style="
-        background: white;
-        padding: 14px;
-        border-radius: 14px;
-        margin-bottom: 20px;
-        border: 1px solid #f1cada;
-    ">
-        <strong>{len(job_names)}</strong><br>
-        <span style="color:#967486;">Job Descriptions</span>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.markdown("### How it works")
-
-    st.markdown("""
-    **01** &nbsp; Select an elective  
-    **02** &nbsp; Explore job matches  
-    **03** &nbsp; Make your decision ♡
-    """)
-
-    st.markdown("---")
-
-    st.markdown("### Match Scores")
-
-    st.markdown("""
-    <div style="line-height: 2; color: #6f5262;">
-        <strong style="color:#69a85a;">●</strong>
-        Strong match &nbsp; <small>above 30%</small><br>
-
-        <strong style="color:#e7ad3d;">●</strong>
-        Moderate match &nbsp; <small>15–30%</small><br>
-
-        <strong style="color:#d96b79;">●</strong>
-        Weak match &nbsp; <small>below 15%</small>
-    </div>
-    """, unsafe_allow_html=True)
-    
-
-# Main content
-st.markdown("### Choose Your Elective")
-st.caption("Explore how each elective connects to potential career opportunities.")
-
-# Dropdown with full elective names
-selected_display = st.selectbox("Choose an elective:", elective_display_names)
-
-# Get the actual syllabus filename
-selected_syllabus = DISPLAY_TO_FILE[selected_display]
-
-# Get similarity scores for the selected syllabus
-scores = similarity_df.loc[selected_syllabus]
-top_matches = scores.sort_values(ascending=False).head(5)
-
-# --- Display Results ---
-st.markdown(f"### Top Career Matches")
-st.caption(f"Showing the strongest job-description matches for **{selected_display}**.")
-
-# Create columns for better layout
-col1, col2 = st.columns([2, 1])
+# ============================================================
+# LEFT COLUMN — TOP 5 MATCHES
+# ============================================================
 
 with col1:
+
     for job, score in top_matches.items():
-        job_name = job.replace('job_', '').replace('_', ' ').title()
-        
-        # Color coding based on score
+
+        job_name = (
+            job
+            .replace("job_", "")
+            .replace("_", " ")
+            .title()
+        )
+
+
+        # ----------------------------------------------------
+        # MATCH CATEGORY
+        # ----------------------------------------------------
+
         if score > 0.3:
+
             label = "Strong match"
-            badge_color = "#78a96b"
+            badge_class = "strong-badge"
+
         elif score > 0.15:
+
             label = "Moderate match"
-            badge_color = "#d9a441"
+            badge_class = "moderate-badge"
+
         else:
+
             label = "Weak match"
-            badge_color = "#cf6d78"
-        
-        
-        st.markdown(f"""
-        <div style="
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        ">
-            <span style="
-                background: {badge_color};
-                width: 9px;
-                height: 9px;
-                border-radius: 50%;
-                display: inline-block;
-            "></span>
+            badge_class = "weak-badge"
 
-            <strong style="color:#4a3040;">
-                {job_name}
-            </strong>
 
-            <span style="
-                color: {badge_color};
-                font-size: 0.8rem;
-                font-weight: 600;
-            ">
-                {label}
-            </span>
+        percentage = score * 100
+
+
+        # ----------------------------------------------------
+        # MATCH CARD
+        # ----------------------------------------------------
+
+        render_html(f"""
+        <div class="match-card">
+
+            <div class="match-header">
+
+                <div class="job-title">
+                    {job_name}
+                </div>
+
+                <div class="match-badge {badge_class}">
+                    {label}
+                </div>
+
+            </div>
+
+            <div class="score-label">
+                Match score · {score:.2%}
+            </div>
+
+            <div class="progress-background">
+
+                <div
+                    class="progress-fill"
+                    style="width: {percentage:.2f}%;">
+                </div>
+
+            </div>
+
         </div>
-""", unsafe_allow_html=True)
-        st.progress(min(score, 1.0), text=f"Score: {score:.2%} - {label}")
-        st.write("---")
+        """)
+
+
+# ============================================================
+# RIGHT COLUMN — BEST MATCH
+# ============================================================
 
 with col2:
-    # Show the top match prominently
+
     top_job = top_matches.index[0]
+
     top_score = top_matches.iloc[0]
-    job_name = top_job.replace('job_', '').replace('_', ' ').title()
-    
-    st.markdown("""
-    <div style="
-        color: #d47d9f;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    ">
+
+    job_name = (
+        top_job
+        .replace("job_", "")
+        .replace("_", " ")
+        .title()
+    )
+
+
+    render_html("""
+    <div class="best-match-label">
         Top Match
     </div>
-    """, unsafe_allow_html=True)
+    """)
 
-    st.metric(
-        label="Best Career Match",
-        value=job_name,
-        delta=f"{top_score:.2%} similarity",
-        delta_color="normal"
-    )
-    
+
+    render_html(f"""
+    <div class="best-match-card">
+
+        <div class="best-match-small">
+            Best Career Match
+        </div>
+
+        <div class="best-match-title">
+            {job_name}
+        </div>
+
+        <div class="similarity-pill">
+            ↑ {top_score:.2%} similarity
+        </div>
+
+    </div>
+    """)
+
+
+    # --------------------------------------------------------
+    # RECOMMENDATION
+    # --------------------------------------------------------
+
     if top_score > 0.3:
-        st.success("This elective strongly aligns with this career path.")
+
+        render_html("""
+        <div class="
+            recommendation
+            recommendation-strong
+        ">
+            This elective strongly aligns with
+            this career path.
+            <br><br>
+            It may be a strong option if you are
+            interested in developing skills relevant
+            to this type of role.
+        </div>
+        """)
+
+
     elif top_score > 0.15:
-        st.warning("This elective has moderate alignment with this career path.")
+
+        render_html("""
+        <div class="
+            recommendation
+            recommendation-moderate
+        ">
+            This elective has moderate alignment
+            with this career path.
+            <br><br>
+            Consider exploring the job requirements
+            alongside the elective content.
+        </div>
+        """)
+
+
     else:
-        st.info("This elective may prepare you for broader roles.")
 
-# --- All Matches Table (Optional) ---
+        render_html("""
+        <div class="
+            recommendation
+            recommendation-weak
+        ">
+            This elective may prepare you for
+            broader career opportunities.
+            <br><br>
+            Consider comparing it with the other
+            available electives.
+        </div>
+        """)
+
+
+# ============================================================
+# ALL MATCHES
+# ============================================================
+
+st.write("")
+
+
 with st.expander("See all career matches"):
-    # Create a DataFrame with all matches sorted
-    all_scores = scores.sort_values(ascending=False)
+
+    all_scores = scores.sort_values(
+        ascending=False
+    )
+
+
     all_matches_df = pd.DataFrame({
-        'Job Title': [job.replace('job_', '').replace('_', ' ').title() for job in all_scores.index],
-        'Match Score': [f"{score:.2%}" for score in all_scores.values],
-        'Similarity': [f"{score:.3f}" for score in all_scores.values]
+
+        "Job Title": [
+            job
+            .replace("job_", "")
+            .replace("_", " ")
+            .title()
+            for job in all_scores.index
+        ],
+
+        "Match Score": [
+            f"{score:.2%}"
+            for score in all_scores.values
+        ],
+
+        "Similarity": [
+            f"{score:.3f}"
+            for score in all_scores.values
+        ]
+
     })
-    st.dataframe(all_matches_df, use_container_width=True)
 
-# --- Footer ---
-st.write("---")
-st.markdown("""
-<div style="
-    text-align: center;
-    padding: 2rem 0 1rem 0;
-    color: #967486;
-">
 
-    <div style="
-        font-family: 'DM Serif Display', serif;
-        font-size: 1.3rem;
-        color: #4a3040;
-    ">
+    st.dataframe(
+        all_matches_df,
+        use_container_width=True,
+        hide_index=True
+    )
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+
+render_html(f"""
+<div class="footer">
+
+    <div class="footer-title">
         Elective Compass
     </div>
 
-    <div style="
-        margin-top: 8px;
-        font-size: 0.8rem;
-    ">
+    <div class="footer-text">
         Built with NLP & Streamlit
-        <br>
-        7 electives • 35 job descriptions
     </div>
 
-    <div style="
-        margin-top: 15px;
-        color: #d47d9f;
-    ">
+    <div class="footer-text">
+        {len(syllabi_names)} electives
+        ·
+        {len(job_names)} job descriptions
+    </div>
+
+    <div class="footer-text"
+         style="margin-top: 0.8rem;">
         ✦ Find your direction ✦
     </div>
 
 </div>
-""", unsafe_allow_html=True)
+""")
