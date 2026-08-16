@@ -65,6 +65,38 @@ job_names = all_data.loc[job_indices, 'filename'].values
 similarity_matrix = cosine_similarity(tfidf_matrix[syllabi_indices], tfidf_matrix[job_indices])
 similarity_df = pd.DataFrame(similarity_matrix, index=syllabi_names, columns=job_names)
 
+# --- ELECTIVE NAME MAPPING (Full Names) ---
+# Map short names to full display names
+ELECTIVE_NAME_MAP = {
+    'cloud': '☁️ Cloud Computing',
+    'mobile': '📱 Mobile Development',
+    'blockchain': '⛓️ Blockchain Development',
+    'cybersecurity': '🔒 Cybersecurity',
+    'data_eng': '📊 Data Engineering',
+    'system_integration': '🔗 System Integration',
+    'qa': '✅ Quality Assurance (QA)'
+}
+
+# Reverse mapping: display name -> syllabus filename
+DISPLAY_TO_FILE = {}
+
+for name in syllabi_names:
+    # Remove 'syllabus_' prefix
+    clean_name = name.replace('syllabus_', '')
+    # Remove numbers and underscores at the end (like _1, _2, etc.)
+    base_name = clean_name.rstrip('0123456789_')
+    # Get the full display name from the map
+    if base_name in ELECTIVE_NAME_MAP:
+        display_name = ELECTIVE_NAME_MAP[base_name]
+    else:
+        # Fallback: convert to title case
+        display_name = base_name.replace('_', ' ').title()
+    # Keep the first occurrence only
+    if display_name not in DISPLAY_TO_FILE:
+        DISPLAY_TO_FILE[display_name] = name
+
+elective_display_names = list(DISPLAY_TO_FILE.keys())
+
 # Sidebar
 with st.sidebar:
     st.header("📌 Quick Info")
@@ -84,28 +116,13 @@ with st.sidebar:
 # Main content
 st.write("### 🔍 Select an Elective")
 
-# --- FIX: Remove duplicate electives from dropdown ---
-# Create a mapping from display name to actual syllabus filename
-elective_map = {}
-for name in syllabi_names:
-    # Remove 'syllabus_' prefix
-    clean_name = name.replace('syllabus_', '')
-    # Remove numbers and underscores at the end (like _1, _2, etc.)
-    base_name = clean_name.rstrip('0123456789_')
-    display_name = base_name.replace('_', ' ').title()
-    # Keep the first occurrence only
-    if display_name not in elective_map:
-        elective_map[display_name] = name
-
-elective_display_names = list(elective_map.keys())
-
-# Dropdown with unique electives
+# Dropdown with full elective names
 selected_display = st.selectbox("Choose an elective:", elective_display_names)
 
 # Get the actual syllabus filename
-selected_syllabus = elective_map[selected_display]
+selected_syllabus = DISPLAY_TO_FILE[selected_display]
 
-# --- Get similarity scores for the selected syllabus ---
+# Get similarity scores for the selected syllabus
 scores = similarity_df.loc[selected_syllabus]
 top_matches = scores.sort_values(ascending=False).head(5)
 
