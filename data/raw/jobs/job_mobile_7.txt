@@ -1,0 +1,25 @@
+Job Title: iOS Developer (Swift)
+Company: CupertinoCraft
+
+Job Description:
+We are looking for an iOS Developer to design and build feature-rich iPhone and iPad applications using Swift and SwiftUI. You will contribute to consumer-facing apps used by thousands of daily active users.
+
+Key Responsibilities:
+- Build native iOS applications using Swift and SwiftUI/UIKit.
+- Implement MVVM or MVC architecture patterns for maintainable codebases.
+- Integrate third-party services using REST APIs and URLSession/Alamofire.
+- Use Firebase Authentication, Firestore, and Push Notifications for backend services.
+- Write unit tests with XCTest and handle Xcode CI/CD workflows.
+- Submit and manage app releases through App Store Connect.
+
+Requirements:
+- Understanding of Swift programming and iOS SDK fundamentals.
+- Knowledge of UIKit and/or SwiftUI for building user interfaces.
+- Familiarity with mobile app lifecycle and Apple Human Interface Guidelines.
+- Experience with Git for version control.
+
+Nice-to-Have:
+- Experience with Flutter as a cross-platform alternative.
+- Knowledge of Core Data for local persistence.
+- Familiarity with Apple frameworks: MapKit, ARKit, or HealthKit.
+- Published app on the Apple App Store.

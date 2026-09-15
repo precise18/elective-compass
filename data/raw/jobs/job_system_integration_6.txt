@@ -1,0 +1,25 @@
+Job Title: Middleware Developer
+Company: ConnectCore Systems
+
+Job Description:
+We are looking for a Middleware Developer to build and maintain the integration layer between our enterprise applications. You will work with messaging systems, APIs, and ESB platforms to ensure reliable data flow across the organisation.
+
+Key Responsibilities:
+- Design and implement integration solutions using Apache Camel and MuleSoft.
+- Build message transformation and routing logic using EIP (Enterprise Integration Patterns).
+- Develop and maintain JMS messaging infrastructure (ActiveMQ, IBM MQ).
+- Create and manage REST and SOAP API integrations.
+- Monitor integration flows and respond to failures, message backlogs, and deadlocks.
+- Document integration flows, data mappings, and interface specifications.
+
+Requirements:
+- Understanding of Enterprise Integration Patterns (EIP) and messaging concepts.
+- Knowledge of Java and the Spring Framework ecosystem.
+- Familiarity with JMS (Java Message Service) and message queue concepts.
+- Experience with RESTful API design and JSON serialisation.
+
+Nice-to-Have:
+- Experience with MuleSoft Anypoint Platform or IBM Integration Bus.
+- Knowledge of SOAP, WSDL, and legacy XML integration patterns.
+- Familiarity with event-driven architectures and Kafka for streaming integration.
+- Certification in MuleSoft Developer (MCD) or equivalent.

@@ -1,0 +1,25 @@
+Job Title: Web3 Frontend Developer
+Company: DeFi Horizon
+
+Job Description:
+We are looking for a Web3 Frontend Developer to build intuitive decentralised application interfaces. You will bridge the gap between smart contracts and end users, creating seamless dApp experiences on Ethereum and Layer 2 networks.
+
+Key Responsibilities:
+- Build responsive dApp frontends using React.js and ethers.js or web3.js.
+- Integrate wallet connectivity (MetaMask, WalletConnect) into web applications.
+- Interact with deployed smart contracts via ABI interfaces.
+- Display on-chain data including token balances, NFT metadata, and transaction history.
+- Implement transaction flows with proper error handling and loading states.
+- Collaborate with smart contract developers to align frontend with contract logic.
+
+Requirements:
+- Proficiency in JavaScript/TypeScript and React.js.
+- Understanding of how Ethereum accounts, transactions, and events work.
+- Ability to read and interact with Solidity ABIs.
+- Knowledge of Web3 libraries (ethers.js, wagmi, or web3.js).
+
+Nice-to-Have:
+- Experience with NFT marketplaces or DeFi dashboards.
+- Familiarity with IPFS for decentralised file storage.
+- Understanding of ERC20 and ERC721 token standards.
+- Experience deploying to testnets (Sepolia, Mumbai).

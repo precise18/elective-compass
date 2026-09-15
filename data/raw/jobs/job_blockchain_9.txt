@@ -1,0 +1,25 @@
+Job Title: DeFi Protocol Developer
+Company: OpenYield Finance
+
+Job Description:
+We are hiring a DeFi Protocol Developer to design and implement decentralised finance smart contracts. You will contribute to building lending, staking, and liquidity pool contracts deployed on EVM-compatible networks.
+
+Key Responsibilities:
+- Design and implement DeFi smart contracts including AMMs, lending pools, and yield farms.
+- Write comprehensive unit and integration tests using Hardhat and Foundry.
+- Implement upgradeable contract patterns (Transparent Proxy, UUPS).
+- Optimise gas consumption in contract logic and data storage.
+- Analyse and implement tokenomics models for governance and utility tokens.
+- Review and integrate third-party DeFi protocol interfaces (Chainlink, Uniswap V3).
+
+Requirements:
+- Proficiency in Solidity smart contract development.
+- Understanding of DeFi primitives: AMMs, liquidity pools, staking, flash loans.
+- Knowledge of ERC20, ERC721, ERC1155 token standards.
+- Strong understanding of the Ethereum Virtual Machine and gas optimisation.
+
+Nice-to-Have:
+- Experience with Vyper as an alternative to Solidity.
+- Familiarity with formal verification tools.
+- Understanding of MEV (Maximal Extractable Value) and its implications.
+- Experience with cross-chain DeFi using bridges or messaging protocols.

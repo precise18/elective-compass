@@ -1,0 +1,25 @@
+Job Title: Penetration Tester (Junior)
+Company: RedTeam Africa
+
+Job Description:
+We are looking for a Junior Penetration Tester to join our offensive security team. You will perform authorised simulated attacks on client systems to identify vulnerabilities before malicious actors do.
+
+Key Responsibilities:
+- Conduct web application penetration tests (OWASP Top 10 vulnerabilities).
+- Perform network penetration testing including reconnaissance, scanning, and exploitation.
+- Use industry-standard tools: Burp Suite, Nmap, Metasploit, and Wireshark.
+- Write detailed penetration test reports with findings, risk ratings, and remediation steps.
+- Assist clients in understanding and prioritising security vulnerabilities.
+- Stay current with emerging attack techniques and CVEs.
+
+Requirements:
+- Understanding of networking protocols (TCP/IP, HTTP/S, DNS, FTP).
+- Familiarity with Linux/Unix command line.
+- Knowledge of OWASP Top 10 web vulnerabilities.
+- Basic scripting skills (Python or Bash).
+
+Nice-to-Have:
+- Completion of TryHackMe or HackTheBox learning paths.
+- CEH, CompTIA Security+, or OSCP certification (or in progress).
+- Experience with Active Directory attacks (Kerberoasting, Pass-the-Hash).
+- Knowledge of cloud security testing (AWS, Azure misconfigurations).

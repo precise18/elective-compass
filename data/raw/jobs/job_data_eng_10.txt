@@ -1,0 +1,25 @@
+Job Title: MLOps / Data Platform Engineer
+Company: ModelOps Labs
+
+Job Description:
+We are seeking an MLOps / Data Platform Engineer to build the infrastructure and pipelines that support machine learning model development and deployment. You will bridge data engineering and machine learning operations.
+
+Key Responsibilities:
+- Build feature engineering pipelines using Python, Spark, and feature store tools.
+- Design and maintain ML training data pipelines with data versioning (DVC, Delta Lake).
+- Implement model training orchestration using Airflow and Kubeflow.
+- Deploy and monitor ML models in production using MLflow and cloud serving platforms.
+- Manage data lineage and cataloguing for regulatory and reproducibility requirements.
+- Collaborate with data scientists to productionise experimental notebooks into robust pipelines.
+
+Requirements:
+- Strong Python programming and data manipulation skills (Pandas, Spark).
+- Understanding of ETL pipeline design and data transformation.
+- Knowledge of cloud platforms (AWS, GCP, or Azure) for data and compute.
+- Familiarity with containerisation (Docker) and basic Kubernetes concepts.
+
+Nice-to-Have:
+- Experience with feature stores (Feast, Tecton, Hopsworks).
+- Knowledge of Apache Kafka for real-time feature engineering.
+- Familiarity with MLflow, Weights & Biases, or similar experiment tracking tools.
+- Understanding of data warehousing and lakehouse architectures.

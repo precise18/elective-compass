@@ -1,0 +1,25 @@
+Job Title: Database Engineer
+Company: CoreData Systems
+
+Job Description:
+We are hiring a Database Engineer to manage and optimise our relational and non-relational database infrastructure. You will ensure data availability, performance, and integrity across transactional and analytical systems.
+
+Key Responsibilities:
+- Design, implement, and maintain PostgreSQL, MySQL, and MongoDB database schemas.
+- Optimise query performance through indexing strategies, query rewriting, and execution plan analysis.
+- Implement database replication, backup, and disaster recovery procedures.
+- Manage database migrations and schema versioning.
+- Administer cloud-managed database services (AWS RDS, GCP Cloud SQL, Azure SQL).
+- Collaborate with data engineers to support ETL pipeline data storage requirements.
+
+Requirements:
+- Strong SQL skills across relational database systems (PostgreSQL or MySQL).
+- Understanding of database normalisation and denormalisation strategies.
+- Knowledge of Unix/Linux systems administration for database hosting.
+- Familiarity with NoSQL concepts (document, key-value, columnar storage).
+
+Nice-to-Have:
+- Experience with data warehousing solutions (Redshift, BigQuery, Snowflake).
+- Knowledge of data replication and change data capture (CDC) patterns.
+- Familiarity with Apache Spark for large-scale data processing.
+- Experience with data modelling tools (ERwin, DBBeaver).

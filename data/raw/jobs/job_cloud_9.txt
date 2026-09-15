@@ -1,0 +1,25 @@
+Job Title: Site Reliability Engineer (SRE)
+Company: UpTime Systems
+
+Job Description:
+We are looking for a Site Reliability Engineer to ensure the reliability, performance, and scalability of our cloud-hosted services. You will apply software engineering principles to infrastructure and operations problems.
+
+Key Responsibilities:
+- Define and track Service Level Objectives (SLOs) and error budgets for critical services.
+- Build and maintain observability stacks using Prometheus, Grafana, and distributed tracing.
+- Automate operational toil with Python and Bash scripts.
+- Design and test disaster recovery and failover procedures.
+- Conduct blameless post-mortems and implement preventative measures.
+- Optimise cloud resource usage and costs across AWS services.
+
+Requirements:
+- Strong Linux/Unix systems knowledge and shell scripting.
+- Experience with monitoring and alerting tools.
+- Understanding of cloud computing concepts and distributed systems.
+- Programming proficiency in Python or Go.
+
+Nice-to-Have:
+- Experience with Kubernetes and container orchestration at scale.
+- Knowledge of chaos engineering principles (AWS Fault Injection Simulator).
+- Familiarity with AWS cost management tools (Cost Explorer, Savings Plans).
+- Understanding of database reliability (RDS Multi-AZ, Aurora Global Clusters).

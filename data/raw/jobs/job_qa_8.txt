@@ -1,0 +1,25 @@
+Job Title: QA Lead / Senior QA Engineer
+Company: QualityFirst Tech
+
+Job Description:
+We are looking for a QA Lead to own the quality strategy for multiple product teams. You will mentor junior QA engineers, define testing standards, and ensure quality is embedded throughout the software development lifecycle.
+
+Key Responsibilities:
+- Define and maintain the quality assurance strategy, processes, and standards across teams.
+- Lead test planning, test design, and test execution for major product releases.
+- Mentor and grow junior QA engineers in both manual and automated testing disciplines.
+- Drive adoption of the Test Automation Pyramid across the engineering organisation.
+- Manage defect triage, prioritisation, and reporting to stakeholders.
+- Champion exploratory testing, risk-based testing, and shift-left quality practices.
+
+Requirements:
+- Strong experience in both manual and automated testing methodologies.
+- Deep understanding of software testing principles, test design techniques, and test coverage metrics.
+- Experience managing test cycles and working with project management tools.
+- Excellent communication and leadership skills.
+
+Nice-to-Have:
+- ISTQB Advanced Level Test Manager certification.
+- Experience with BDD frameworks (Cucumber, Behave).
+- Knowledge of performance and security testing as part of a holistic QA strategy.
+- Familiarity with agile and DevOps quality practices.

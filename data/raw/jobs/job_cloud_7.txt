@@ -1,0 +1,25 @@
+Job Title: DevOps Engineer
+Company: Velocity Deploy
+
+Job Description:
+We are seeking a DevOps Engineer to automate and optimise our software delivery pipeline. You will work at the intersection of software development and cloud infrastructure, enabling fast, reliable deployments.
+
+Key Responsibilities:
+- Build and maintain CI/CD pipelines using GitLab CI, GitHub Actions, or Jenkins.
+- Manage containerised applications using Docker and Kubernetes (EKS or self-managed).
+- Automate infrastructure provisioning with Terraform and Ansible.
+- Monitor application and infrastructure health using Prometheus, Grafana, and CloudWatch.
+- Implement secrets management using AWS Secrets Manager or HashiCorp Vault.
+- Collaborate with developers to optimise build times and deployment frequency.
+
+Requirements:
+- Proficiency in bash scripting and at least one programming language (Python preferred).
+- Understanding of CI/CD concepts and GitFlow branching strategies.
+- Hands-on experience with Docker and basic Kubernetes operations.
+- Knowledge of cloud platforms, primarily AWS.
+
+Nice-to-Have:
+- Experience with Helm for Kubernetes package management.
+- Knowledge of service mesh technologies (Istio, Linkerd).
+- AWS Certified DevOps Engineer certification.
+- Experience with GitOps workflows (ArgoCD, Flux).

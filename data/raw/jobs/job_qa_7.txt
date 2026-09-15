@@ -1,0 +1,25 @@
+Job Title: Performance Test Engineer
+Company: LoadLabs
+
+Job Description:
+We are seeking a Performance Test Engineer to ensure our applications meet scalability and response time requirements under load. You will design, execute, and analyse performance test scenarios for web and API systems.
+
+Key Responsibilities:
+- Design load, stress, soak, and spike test scenarios aligned with business SLAs.
+- Develop and maintain performance test scripts using JMeter and Gatling.
+- Analyse results to identify bottlenecks, memory leaks, and database query issues.
+- Profile application performance using APM tools (New Relic, Dynatrace, Datadog).
+- Collaborate with developers to reproduce and resolve performance defects.
+- Define and track performance benchmarks throughout the release cycle.
+
+Requirements:
+- Understanding of the Test Automation Pyramid and non-functional testing concepts.
+- Knowledge of HTTP protocols and client-server request/response cycles.
+- Ability to analyse performance metrics: response time, throughput, error rate, percentiles.
+- Basic scripting ability for parameterising test scenarios.
+
+Nice-to-Have:
+- Experience with cloud-based load testing platforms (BlazeMeter, k6 Cloud).
+- Knowledge of database performance analysis (slow query logs, execution plans).
+- Familiarity with Kubernetes horizontal pod autoscaling under load.
+- ISTQB Performance Testing certification.

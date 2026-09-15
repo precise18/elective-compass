@@ -1,0 +1,25 @@
+Job Title: Data Pipeline Engineer
+Company: Streamline Analytics
+
+Job Description:
+We are looking for a Data Pipeline Engineer to design, build, and maintain reliable data pipelines that move and transform data at scale. You will work across ingestion, transformation, and delivery layers of our data platform.
+
+Key Responsibilities:
+- Build batch and streaming ETL pipelines using Apache Spark and Kafka.
+- Orchestrate complex workflows using Apache Airflow DAGs.
+- Ingest data from diverse sources: REST APIs, databases, cloud storage, and event streams.
+- Implement data quality checks and monitoring across the pipeline.
+- Manage data storage in AWS S3, Redshift, and GCP BigQuery.
+- Work with data scientists and analysts to ensure clean, reliable datasets.
+
+Requirements:
+- Proficiency in Python and SQL.
+- Understanding of ETL/ELT concepts and data pipeline architecture.
+- Knowledge of Apache Spark for large-scale data processing.
+- Familiarity with workflow orchestration tools (Airflow, Prefect, or Dagster).
+
+Nice-to-Have:
+- Experience with streaming platforms (Kafka, Kinesis, Pub/Sub).
+- Knowledge of cloud data services (AWS Glue, GCP Dataflow, Azure Data Factory).
+- Familiarity with dbt for SQL-based transformations.
+- Understanding of data lakehouse architectures (Delta Lake, Apache Iceberg).

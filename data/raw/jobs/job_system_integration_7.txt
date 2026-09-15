@@ -1,0 +1,25 @@
+Job Title: Microservices Architect (Junior)
+Company: ServiceMesh SA
+
+Job Description:
+We are seeking a Junior Microservices Architect to help design and evolve our distributed system architecture. You will work with senior architects to decompose monoliths, define service boundaries, and ensure reliable inter-service communication.
+
+Key Responsibilities:
+- Design microservice boundaries aligned to domain-driven design (DDD) principles.
+- Define inter-service communication patterns: synchronous REST/gRPC and asynchronous messaging.
+- Implement fault tolerance patterns: circuit breakers, retries, and bulkheads using Resilience4j.
+- Design data consistency strategies for distributed transactions (Saga pattern, eventual consistency).
+- Contribute to API gateway configuration and service discovery setup.
+- Create and maintain architecture decision records (ADRs) and system diagrams.
+
+Requirements:
+- Understanding of distributed systems concepts: consistency, availability, partition tolerance.
+- Knowledge of RESTful API design and JSON-based communication.
+- Familiarity with message queues and event-driven architecture.
+- Experience with Java or Python microservice development.
+
+Nice-to-Have:
+- Experience with Spring Boot and Spring Cloud for microservice development.
+- Knowledge of Kubernetes for microservice deployment and scaling.
+- Familiarity with service mesh technologies (Istio, Linkerd).
+- Understanding of observability in distributed systems (tracing, metrics, logging).

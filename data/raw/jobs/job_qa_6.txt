@@ -1,0 +1,25 @@
+Job Title: Test Automation Engineer (Selenium/Python)
+Company: AutoTest Solutions
+
+Job Description:
+We are hiring a Test Automation Engineer to build and maintain automated regression, functional, and performance test suites. You will reduce manual testing effort and accelerate our release cycle through robust automation.
+
+Key Responsibilities:
+- Design, develop, and maintain automated test scripts using Selenium WebDriver and Python.
+- Build and maintain a data-driven and keyword-driven test automation framework.
+- Integrate automated tests into CI/CD pipelines (GitLab CI, Jenkins).
+- Perform API testing using Postman and Python requests library.
+- Generate test execution reports using Allure or pytest-html.
+- Identify flaky tests and improve test stability and maintainability.
+
+Requirements:
+- Understanding of software testing principles and the Test Automation Pyramid.
+- Proficiency in Python for scripting and test automation.
+- Knowledge of Selenium WebDriver for browser-based testing.
+- Familiarity with test management tools (JIRA, Zephyr, or TestRail).
+
+Nice-to-Have:
+- Experience with performance testing tools (JMeter, Locust, or k6).
+- Knowledge of mobile test automation (Appium).
+- ISTQB Test Automation Engineer certification.
+- Understanding of containerised test execution (Docker, Selenium Grid).

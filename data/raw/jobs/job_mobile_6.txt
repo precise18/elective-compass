@@ -1,0 +1,25 @@
+Job Title: Android Developer (Kotlin)
+Company: NativeMobile SA
+
+Job Description:
+We are seeking an Android Developer to build and maintain high-quality native Android applications using Kotlin. You will work on the full app lifecycle, from architecture design to Play Store deployment.
+
+Key Responsibilities:
+- Develop native Android apps using Kotlin and Jetpack Compose.
+- Implement modern Android architecture patterns (MVVM, Clean Architecture).
+- Integrate REST APIs using Retrofit and manage local data with Room database.
+- Implement Firebase services: Authentication, Firestore, Cloud Messaging, and Crashlytics.
+- Write unit tests and UI tests using JUnit and Espresso.
+- Publish and maintain app releases on the Google Play Store.
+
+Requirements:
+- Understanding of Kotlin programming fundamentals.
+- Knowledge of Android SDK and core Jetpack libraries (ViewModel, LiveData, Navigation).
+- Familiarity with mobile UI/UX design principles and Material Design.
+- Experience with version control (Git).
+
+Nice-to-Have:
+- Experience with Flutter for cross-platform development alongside native.
+- Knowledge of Coroutines and Flow for asynchronous programming.
+- Familiarity with CI/CD for mobile (Fastlane, Firebase App Distribution).
+- Published app on the Google Play Store.

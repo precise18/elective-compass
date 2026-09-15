@@ -1,0 +1,25 @@
+Job Title: Blockchain Backend Engineer
+Company: TokenWorks Ltd
+
+Job Description:
+We are seeking a Blockchain Backend Engineer to develop and maintain server-side systems that interact with blockchain networks. You will build APIs, indexers, and event listeners that power our Web3 platform.
+
+Key Responsibilities:
+- Build Node.js or Python backend services that communicate with Ethereum and Solana nodes.
+- Develop blockchain event listeners and indexers to track on-chain activity.
+- Design and maintain REST and GraphQL APIs consumed by frontend dApps.
+- Manage database storage for off-chain data (PostgreSQL, MongoDB).
+- Implement wallet and transaction management logic.
+- Integrate third-party blockchain services (Alchemy, Infura, Moralis).
+
+Requirements:
+- Strong backend development experience with Node.js or Python.
+- Understanding of blockchain fundamentals: wallets, transactions, blocks, consensus.
+- Familiarity with Ethereum JSON-RPC and provider libraries.
+- Knowledge of relational and non-relational databases.
+
+Nice-to-Have:
+- Experience with The Graph protocol for indexing blockchain data.
+- Knowledge of Solana Web3.js SDK.
+- Understanding of BNB Chain and cross-chain bridging concepts.
+- Experience with Docker and containerised deployments.

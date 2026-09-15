@@ -1,0 +1,25 @@
+Job Title: Secure Software Developer
+Company: TrustBuild Technologies
+
+Job Description:
+We are seeking a Secure Software Developer to build web applications with security built in from the ground up. You will apply secure coding standards across the full software development lifecycle and champion a security-first engineering culture.
+
+Key Responsibilities:
+- Write secure backend and frontend code with protection against OWASP Top 10 vulnerabilities.
+- Integrate automated security checks (SAST/DAST) into CI/CD pipelines.
+- Implement authentication and authorisation patterns (OAuth 2.0, JWT, RBAC).
+- Conduct peer code reviews with a security focus.
+- Work with security teams during penetration testing remediation cycles.
+- Create and maintain security documentation and threat models for application features.
+
+Requirements:
+- Proficiency in at least one backend language (Python, Java, Node.js).
+- Understanding of web application security vulnerabilities and mitigations.
+- Experience with version control and CI/CD practices.
+- Knowledge of input validation, parameterised queries, and output encoding.
+
+Nice-to-Have:
+- Completion of Cisco Networking Academy cybersecurity courses or TryHackMe Pre-Security path.
+- Experience with API security (rate limiting, authentication, authorisation).
+- Familiarity with penetration testing tools to validate security controls.
+- CSSLP (Certified Secure Software Lifecycle Professional) in progress.

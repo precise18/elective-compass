@@ -1,0 +1,25 @@
+Job Title: AWS Solutions Architect (Associate)
+Company: ScaleUp Technologies
+
+Job Description:
+We are looking for an AWS Solutions Architect to design and implement scalable, cost-effective cloud infrastructure on Amazon Web Services. You will work closely with engineering teams to translate business requirements into cloud architectures.
+
+Key Responsibilities:
+- Design resilient, highly available cloud architectures on AWS.
+- Select appropriate AWS services for compute, storage, networking, and security needs.
+- Create architecture diagrams and technical documentation.
+- Evaluate cost-optimisation opportunities using AWS Cost Explorer and Trusted Advisor.
+- Implement infrastructure as code using AWS CloudFormation and Terraform.
+- Guide engineering teams on cloud best practices and the AWS Well-Architected Framework.
+
+Requirements:
+- Understanding of core AWS services: EC2, S3, RDS, Lambda, VPC, IAM.
+- Knowledge of cloud networking fundamentals (subnets, routing, security groups).
+- Familiarity with high availability and disaster recovery principles.
+- Experience with at least one IaC tool (CloudFormation, Terraform, or CDK).
+
+Nice-to-Have:
+- AWS Certified Solutions Architect Associate or Professional.
+- Experience with multi-account AWS organisations.
+- Knowledge of AWS security services (GuardDuty, Security Hub, WAF).
+- Familiarity with containerised workloads (ECS, EKS).

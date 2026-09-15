@@ -1,0 +1,25 @@
+Job Title: Mobile UI/UX Designer & Developer
+Company: PixelPulse Apps
+
+Job Description:
+We are hiring a Mobile UI/UX Designer & Developer who can both design beautiful mobile interfaces and implement them in Flutter or React Native. You will own the visual experience of our mobile products end-to-end.
+
+Key Responsibilities:
+- Design mobile app interfaces in Figma, creating wireframes, prototypes, and design systems.
+- Translate Figma designs into pixel-perfect Flutter or React Native components.
+- Conduct usability testing and iterate based on user feedback.
+- Implement responsive layouts that adapt across phone and tablet screen sizes.
+- Build custom animations and transitions using Flutter's animation framework.
+- Collaborate with backend developers to integrate APIs into UI components.
+
+Requirements:
+- Proficiency in Figma or equivalent design tools.
+- Experience implementing mobile UIs with Flutter (Dart) or React Native.
+- Strong understanding of mobile UI/UX principles and accessibility standards.
+- Knowledge of design systems, component libraries, and style guides.
+
+Nice-to-Have:
+- Experience with Firebase Authentication for user flows.
+- Knowledge of motion design and micro-interaction principles.
+- Familiarity with A/B testing tools for mobile apps.
+- Understanding of cloud integration for mobile backends.

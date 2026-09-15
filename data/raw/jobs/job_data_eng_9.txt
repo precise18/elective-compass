@@ -1,0 +1,25 @@
+Job Title: Streaming Data Engineer
+Company: RealTime Insights
+
+Job Description:
+We are looking for a Streaming Data Engineer specialising in real-time data processing. You will build event-driven pipelines that process millions of events per second using Apache Kafka and stream processing frameworks.
+
+Key Responsibilities:
+- Design and implement real-time data streaming pipelines using Apache Kafka and Kafka Streams.
+- Build stream processing jobs with Apache Flink or Spark Structured Streaming.
+- Implement exactly-once semantics and fault-tolerant processing patterns.
+- Design event schemas and manage Schema Registry for data contracts.
+- Monitor pipeline latency, throughput, and consumer lag using Kafka metrics.
+- Integrate streaming pipelines with cloud storage and real-time dashboards.
+
+Requirements:
+- Strong Python or Java/Scala programming skills.
+- Understanding of distributed systems concepts: partitioning, replication, fault tolerance.
+- Knowledge of Apache Kafka architecture (brokers, topics, consumer groups).
+- Familiarity with ETL and batch processing frameworks for comparison.
+
+Nice-to-Have:
+- Experience with managed streaming services (AWS MSK, Confluent Cloud, GCP Pub/Sub).
+- Knowledge of Apache Airflow for hybrid batch/streaming orchestration.
+- Familiarity with time-series databases (InfluxDB, TimescaleDB).
+- Understanding of event sourcing and CQRS architectural patterns.

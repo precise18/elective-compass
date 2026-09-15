@@ -1,0 +1,25 @@
+Job Title: Mobile Backend Developer (Firebase & Cloud)
+Company: CloudMobile Co.
+
+Job Description:
+We are looking for a Mobile Backend Developer to build and maintain the cloud infrastructure and backend services that power our mobile applications. You will work primarily with Firebase and AWS to provide reliable mobile backends.
+
+Key Responsibilities:
+- Design and implement Firebase backend services: Firestore, Realtime Database, Authentication, Cloud Functions, and Cloud Messaging.
+- Build serverless backend logic using Firebase Cloud Functions (Node.js).
+- Implement secure, scalable REST APIs for mobile consumption.
+- Manage user authentication flows including social login, email/password, and phone auth.
+- Configure push notification systems using Firebase Cloud Messaging (FCM).
+- Monitor app performance using Firebase Performance Monitoring and Crashlytics.
+
+Requirements:
+- Understanding of Firebase platform services and the Firebase console.
+- Proficiency in JavaScript/TypeScript (Node.js) for serverless function development.
+- Knowledge of database design for mobile use cases (denormalization, offline sync).
+- Familiarity with mobile app development (Flutter, React Native, or native).
+
+Nice-to-Have:
+- Experience with AWS mobile services (Amplify, Cognito, API Gateway).
+- Knowledge of cloud integration patterns for mobile (offline-first, sync).
+- Familiarity with App Store and Play Store submission processes.
+- Understanding of mobile security (certificate pinning, secure storage).

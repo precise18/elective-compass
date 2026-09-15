@@ -1,0 +1,24 @@
+Job Title: Smart Contract Auditor
+Company: ChainSec Labs
+
+Job Description:
+We are seeking a detail-oriented Smart Contract Auditor to review and audit Solidity and Vyper smart contracts for security vulnerabilities. You will help our clients deploy secure decentralised applications on Ethereum and EVM-compatible chains.
+
+Key Responsibilities:
+- Perform manual and automated security audits of Solidity/Vyper smart contracts.
+- Identify vulnerabilities such as reentrancy, integer overflow, and access control flaws.
+- Write detailed audit reports with severity ratings and remediation guidance.
+- Use tools like Slither, Mythril, and Echidna for static and dynamic analysis.
+- Collaborate with development teams to implement security fixes.
+- Stay current with known attack vectors (e.g., flash loan attacks, front-running).
+
+Requirements:
+- Strong understanding of Solidity or Vyper smart contract development.
+- Knowledge of common smart contract vulnerabilities (OWASP Smart Contract Top 10).
+- Familiarity with the Ethereum Virtual Machine (EVM).
+- Experience using blockchain testing frameworks (Hardhat, Foundry, Brownie).
+
+Nice-to-Have:
+- Experience with DeFi protocols (Uniswap, Aave, Compound).
+- Understanding of cryptographic primitives (hashing, signatures, Merkle trees).
+- Contributions to open-source security research or bug bounty programs.

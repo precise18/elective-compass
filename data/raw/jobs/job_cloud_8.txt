@@ -1,0 +1,25 @@
+Job Title: Cloud Security Engineer
+Company: SecureCloud SA
+
+Job Description:
+We are hiring a Cloud Security Engineer to protect our AWS cloud environment. You will enforce security controls, conduct compliance assessments, and respond to security events across our cloud infrastructure.
+
+Key Responsibilities:
+- Design and enforce IAM policies, roles, and permission boundaries across AWS accounts.
+- Implement network security controls: security groups, NACLs, WAF, and Shield.
+- Configure and monitor AWS security services: GuardDuty, Security Hub, Config, and Macie.
+- Conduct regular vulnerability assessments and penetration tests of cloud environments.
+- Ensure compliance with industry frameworks (CIS Benchmarks, SOC 2, POPIA).
+- Respond to cloud security incidents and perform root cause analysis.
+
+Requirements:
+- Understanding of AWS IAM, VPC security, and encryption at rest/in transit.
+- Knowledge of security compliance frameworks and cloud security best practices.
+- Familiarity with AWS security services (GuardDuty, Config, Inspector).
+- Basic scripting skills in Python or Bash for automation.
+
+Nice-to-Have:
+- AWS Certified Security Specialty certification.
+- Experience with SIEM integration (Splunk, AWS Security Lake).
+- Knowledge of zero-trust architecture principles.
+- Familiarity with infrastructure security scanning tools (Checkov, tfsec).

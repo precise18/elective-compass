@@ -1,0 +1,25 @@
+Job Title: React Native Developer
+Company: CrossPlat Studios
+
+Job Description:
+We are seeking a React Native Developer to build cross-platform mobile apps for iOS and Android from a single JavaScript codebase. You will work in a fast-paced product team delivering consumer mobile experiences.
+
+Key Responsibilities:
+- Build and maintain cross-platform mobile apps using React Native and TypeScript.
+- Implement navigation using React Navigation and state management with Redux or Zustand.
+- Integrate REST and GraphQL APIs and manage local state and caching.
+- Use Expo or bare React Native workflow depending on project requirements.
+- Write unit and integration tests using Jest and React Native Testing Library.
+- Optimise app performance including render performance and bundle size.
+
+Requirements:
+- Proficiency in JavaScript/TypeScript and React fundamentals.
+- Understanding of mobile development concepts (lifecycle, navigation, gestures).
+- Knowledge of mobile UI/UX design principles.
+- Familiarity with version control (Git) and agile development.
+
+Nice-to-Have:
+- Experience with Flutter as an alternative cross-platform framework for comparison.
+- Knowledge of native module bridging for platform-specific features.
+- Familiarity with Firebase services (Auth, Firestore, Analytics).
+- Experience deploying to the Play Store and App Store.

@@ -1,0 +1,25 @@
+Job Title: Enterprise Integration Consultant
+Company: SynapseConnect
+
+Job Description:
+We are seeking an Enterprise Integration Consultant to help large organisations connect their legacy and modern systems. You will assess integration landscapes, design target architectures, and lead implementation of integration platforms.
+
+Key Responsibilities:
+- Assess existing system landscapes and identify integration gaps and redundancies.
+- Design integration architectures using hub-and-spoke, point-to-point, and event-driven patterns.
+- Lead implementation of integration platforms: MuleSoft, IBM App Connect, or Apache Camel.
+- Define data governance standards for systems-of-record and master data management.
+- Manage integration projects from requirements through to production go-live.
+- Deliver technical workshops and documentation to client engineering teams.
+
+Requirements:
+- Strong understanding of enterprise integration patterns (EIP) and system integration approaches.
+- Knowledge of JMS interfaces, RESTful APIs, and JSON serialisation for system communication.
+- Experience with distributed system design including fault tolerance and data consistency.
+- Excellent communication and stakeholder management skills.
+
+Nice-to-Have:
+- Experience with IoT integration patterns and message queue infrastructure for real-time data.
+- Knowledge of traffic monitoring or logistics management system integration (TrafficFlow, LogisticsConnect).
+- Familiarity with microservices and event-driven architecture modernisation patterns.
+- MuleSoft Certified Integration Architect or IBM Integration Bus certification.

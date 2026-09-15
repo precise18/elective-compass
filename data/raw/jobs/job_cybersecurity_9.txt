@@ -1,0 +1,25 @@
+Job Title: Vulnerability Management Analyst
+Company: Fortify Digital
+
+Job Description:
+We are looking for a Vulnerability Management Analyst to identify, assess, and track security vulnerabilities across our technology estate. You will manage the full vulnerability lifecycle from discovery to remediation verification.
+
+Key Responsibilities:
+- Run regular vulnerability scans using Tenable Nessus and Qualys.
+- Prioritise vulnerabilities using CVSS scores and business risk context.
+- Work with system owners to track and drive remediation activities.
+- Produce executive and technical vulnerability reports and trend dashboards.
+- Maintain the organisation's patch management programme.
+- Conduct risk assessments in line with ISO 27001 and POPIA compliance requirements.
+
+Requirements:
+- Understanding of vulnerability scoring systems (CVSS v3.x).
+- Knowledge of common vulnerability types across network, OS, and application layers.
+- Familiarity with security compliance frameworks (ISO 27001, NIST CSF).
+- Basic scripting ability for report automation (Python or PowerShell).
+
+Nice-to-Have:
+- Experience with Tenable.io or Qualys VMDR.
+- Knowledge of cloud vulnerability management (AWS Inspector, Azure Defender).
+- CompTIA Security+ or equivalent certification.
+- Familiarity with penetration testing tools for validation scanning.

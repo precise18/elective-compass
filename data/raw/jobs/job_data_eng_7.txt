@@ -1,0 +1,25 @@
+Job Title: Analytics Engineer
+Company: MetricFlow
+
+Job Description:
+We are seeking an Analytics Engineer to sit at the intersection of data engineering and business intelligence. You will build the data models and transformation layers that power company-wide analytics and reporting.
+
+Key Responsibilities:
+- Design and build clean, reliable data models in our data warehouse using dbt.
+- Write well-documented SQL transformations following dimensional modelling principles.
+- Collaborate with analysts to define metrics, dimensions, and KPIs.
+- Maintain data quality tests and documentation within dbt.
+- Build and maintain BI dashboards in Looker, Metabase, or Tableau.
+- Manage ingestion pipelines using tools like Fivetran or Airbyte.
+
+Requirements:
+- Strong SQL skills and understanding of data modelling concepts.
+- Experience with data warehouses (BigQuery, Redshift, or Snowflake).
+- Analytical mindset with ability to translate business questions into data models.
+- Familiarity with version control (Git).
+
+Nice-to-Have:
+- Experience with dbt (data build tool) for transformation.
+- Knowledge of Python for data pipeline scripting.
+- Familiarity with Apache Airflow for orchestration.
+- Understanding of batch processing and stream processing trade-offs.

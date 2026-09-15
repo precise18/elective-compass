@@ -1,0 +1,25 @@
+Job Title: Mobile QA Engineer
+Company: AppQuality Labs
+
+Job Description:
+We are seeking a Mobile QA Engineer to ensure the quality of iOS and Android applications. You will perform both manual exploratory testing and automated UI testing on mobile platforms.
+
+Key Responsibilities:
+- Design and execute manual test cases for mobile apps across iOS and Android devices.
+- Build automated UI tests using Appium and Python or Java.
+- Perform compatibility testing across different device sizes, OS versions, and screen densities.
+- Test mobile-specific features: push notifications, offline mode, gestures, and biometric auth.
+- Report and track bugs in JIRA with clear reproduction steps and device-specific details.
+- Integrate mobile tests into CI/CD pipelines using Firebase Test Lab or AWS Device Farm.
+
+Requirements:
+- Understanding of mobile application testing challenges and the Test Automation Pyramid.
+- Familiarity with iOS and Android platforms and their respective testing approaches.
+- Ability to write clear, reproducible bug reports.
+- Basic scripting knowledge for test automation (Python or Java).
+
+Nice-to-Have:
+- Experience with Appium for mobile UI automation.
+- Knowledge of performance testing for mobile (battery, memory, network).
+- Familiarity with Firebase Crashlytics for crash monitoring.
+- ISTQB Mobile Application Testing certification or equivalent.

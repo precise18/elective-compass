@@ -1,0 +1,25 @@
+Job Title: Distributed Systems Engineer
+Company: FaultTolerant Labs
+
+Job Description:
+We are looking for a Distributed Systems Engineer to build resilient, fault-tolerant systems that operate reliably across network partitions and partial failures. You will focus on the core engineering challenges of building services that work in the real world.
+
+Key Responsibilities:
+- Design distributed systems with explicit handling of partial failures and network partitions.
+- Implement fault tolerance patterns: circuit breakers, bulkheads, timeouts, and fallbacks.
+- Build distributed data consistency solutions using event sourcing and CQRS.
+- Design and implement distributed monitoring and alerting using Prometheus and Grafana.
+- Conduct chaos engineering experiments to validate system resilience.
+- Create runbooks and post-mortem reports for distributed system incidents.
+
+Requirements:
+- Understanding of distributed systems fundamentals: CAP theorem, eventual consistency, consensus.
+- Experience with message queue infrastructure (Kafka, RabbitMQ, or JMS).
+- Knowledge of microservices architecture and inter-service communication.
+- Proficiency in Java, Python, or Go for systems programming.
+
+Nice-to-Have:
+- Experience with Kubernetes for container orchestration in distributed deployments.
+- Knowledge of distributed tracing (Jaeger, Zipkin, OpenTelemetry).
+- Familiarity with projects like HealthSafe or LogisticsConnect distributed system design patterns.
+- Understanding of data replication and distributed database consistency.

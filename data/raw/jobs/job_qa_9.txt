@@ -1,0 +1,25 @@
+Job Title: Software Development Engineer in Test (SDET)
+Company: TestCraft Engineering
+
+Job Description:
+We are hiring an SDET to build test infrastructure, tooling, and automation frameworks that empower the entire engineering team to ship with confidence. You will be as comfortable writing production code as test code.
+
+Key Responsibilities:
+- Build and maintain test automation frameworks in Python or Java used across multiple teams.
+- Develop testing utilities, mock services, and test data generators.
+- Implement contract testing using Pact to ensure API compatibility between microservices.
+- Build end-to-end test pipelines covering unit, integration, and system testing layers.
+- Contribute to the application codebase to improve testability (dependency injection, interfaces).
+- Analyse test coverage metrics and identify gaps in the automation suite.
+
+Requirements:
+- Strong software development skills in Python or Java.
+- Deep understanding of automated testing at all levels of the Test Automation Pyramid.
+- Experience with unit testing frameworks (pytest, JUnit) and mocking libraries.
+- Knowledge of API testing and microservices testing challenges.
+
+Nice-to-Have:
+- Experience with browser automation (Playwright, Cypress, or Selenium).
+- Knowledge of performance and scalability testing tools.
+- Familiarity with containerised test environments (Docker, TestContainers).
+- Understanding of quality metrics: test coverage, mutation testing, defect density.

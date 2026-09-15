@@ -1,0 +1,25 @@
+Job Title: Security Operations Centre (SOC) Analyst
+Company: CyberWatch Solutions
+
+Job Description:
+We are hiring a SOC Analyst to monitor, detect, and respond to cybersecurity threats in real time. You will be the first line of defence, triaging alerts and escalating incidents within our 24/7 operations centre.
+
+Key Responsibilities:
+- Monitor security alerts from SIEM platforms (Splunk, Microsoft Sentinel, QRadar).
+- Triage and investigate security events to determine severity and impact.
+- Respond to incidents following established playbooks and escalation procedures.
+- Analyse logs from firewalls, endpoints, and cloud platforms for indicators of compromise.
+- Produce incident reports and document findings in ticketing systems.
+- Tune detection rules to reduce false positives and improve alert fidelity.
+
+Requirements:
+- Understanding of common attack techniques (phishing, malware, lateral movement).
+- Familiarity with SIEM tools and log analysis.
+- Knowledge of network security fundamentals and common protocols.
+- Ability to work in a fast-paced, time-sensitive environment.
+
+Nice-to-Have:
+- TryHackMe SOC Level 1 path or equivalent training.
+- CompTIA Security+ or CySA+ certification.
+- Experience with endpoint detection and response (EDR) tools.
+- Knowledge of MITRE ATT&CK framework for threat classification.

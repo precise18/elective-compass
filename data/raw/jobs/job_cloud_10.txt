@@ -1,0 +1,25 @@
+Job Title: Cloud Data Engineer
+Company: DataStream Cloud
+
+Job Description:
+We are seeking a Cloud Data Engineer to design and build scalable data pipelines on AWS. You will work with large volumes of structured and unstructured data, enabling analytics and machine learning workloads.
+
+Key Responsibilities:
+- Build and manage ETL/ELT pipelines using AWS Glue, Step Functions, and Lambda.
+- Design data lake architectures on Amazon S3 with partitioning and cataloguing strategies.
+- Manage data warehouse workloads on Amazon Redshift and Athena.
+- Implement data streaming using Amazon Kinesis and MSK (Managed Kafka).
+- Enforce data governance, quality, and lineage using AWS Lake Formation.
+- Collaborate with data scientists and analysts to provision the right data products.
+
+Requirements:
+- Experience with SQL and at least one of: Python, Scala, or Spark.
+- Understanding of cloud storage and compute services on AWS.
+- Knowledge of data warehousing concepts and dimensional modelling.
+- Familiarity with big data processing frameworks.
+
+Nice-to-Have:
+- AWS Certified Data Analytics Specialty.
+- Experience with dbt for data transformation.
+- Knowledge of Apache Iceberg or Delta Lake table formats.
+- Familiarity with data orchestration tools (Airflow, AWS MWAA).

@@ -1,0 +1,25 @@
+Job Title: Application Security Engineer
+Company: SecureCode ZA
+
+Job Description:
+We are seeking an Application Security Engineer to embed security into our software development lifecycle. You will work alongside development teams to identify, remediate, and prevent security vulnerabilities in our applications.
+
+Key Responsibilities:
+- Perform secure code reviews and static analysis using SAST tools (Semgrep, SonarQube).
+- Integrate DAST tools into CI/CD pipelines for continuous security testing.
+- Conduct threat modelling for new features and architectural changes.
+- Triage and manage vulnerability findings from bug bounty programmes.
+- Develop and deliver secure coding training to development teams.
+- Define and enforce Application Security policies and standards.
+
+Requirements:
+- Strong understanding of secure coding practices across web application stacks.
+- Knowledge of OWASP Top 10 and SANS Top 25 vulnerability categories.
+- Experience with software testing in a development context.
+- Familiarity with common web frameworks (Node.js, Django, Spring Boot).
+
+Nice-to-Have:
+- Experience with API security testing (REST, GraphQL).
+- Knowledge of software composition analysis (SCA) tools for dependency scanning.
+- Familiarity with Cisco Networking Academy or equivalent security training.
+- GWEB or GWEB certification or equivalent application security credential.

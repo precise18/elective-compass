@@ -1,0 +1,25 @@
+Job Title: NFT Platform Engineer
+Company: ArtChain Studio
+
+Job Description:
+We are looking for an NFT Platform Engineer to build and maintain our NFT minting, trading, and display platform. You will work on smart contracts and the full-stack infrastructure that powers our creators' marketplace.
+
+Key Responsibilities:
+- Develop ERC721 and ERC1155 NFT smart contracts with custom minting logic.
+- Build metadata standards and integrate with IPFS for decentralised asset storage.
+- Implement royalty standards (ERC2981) and allowlist minting mechanisms.
+- Create NFT reveal, staking, and burn mechanics.
+- Build frontend interfaces using React and ethers.js for minting and trading flows.
+- Monitor contract events and build a backend indexer for NFT ownership data.
+
+Requirements:
+- Understanding of Solidity and ERC721/ERC1155 token standards.
+- Familiarity with IPFS and decentralised storage (Pinata, NFT.Storage).
+- Knowledge of OpenSea and NFT marketplace standards.
+- Experience with JavaScript/TypeScript and frontend development.
+
+Nice-to-Have:
+- Knowledge of Solana NFT standards (Metaplex).
+- Experience with Layer 2 networks (Polygon, Base, Arbitrum) for low-cost minting.
+- Understanding of cross-chain NFT use cases and bridges.
+- Experience with on-chain generative art or SVG rendering.
